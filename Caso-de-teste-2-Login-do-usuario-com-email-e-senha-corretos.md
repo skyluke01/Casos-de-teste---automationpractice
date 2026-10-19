@@ -52,13 +52,13 @@ Fazer com que o usuário consiga facilmente entrar em sua conta e ter acesso a t
 * **Senha:** `SenhaForte@123`
 
 ### Passos do Teste
-1. Abrir o navegador web[cite: 1]
+1. Abrir o navegador web
 2. Navegar para a URL [Automation Exercise](https://www.automationexercise.com)
 3. Verificar se a página home está visível e carregada corretamente
 4. Localizar e clicar no botão "Signup / Login" no menu superior
 5. Verificar se "Login to your account" está visível na página
-6. Digite o email e senha corretos[cite: 1]
-7. Aperte o botão "Login"[cite: 1]
+6. Digite o email e senha corretos
+7. Aperte o botão "Login"
 8. Verificar se está aparecendo "Logged in as (nome do usuario)"
 9. Clicar no botão "Delete Account" no menu superior
 10. Verificar se a mensagem "Account Deleted" está visível
