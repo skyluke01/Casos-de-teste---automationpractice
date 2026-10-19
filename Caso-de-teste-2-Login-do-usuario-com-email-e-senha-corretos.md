@@ -1,11 +1,5 @@
 # 📋 Caso de Teste: Login do usuário com email e senha corretos
 
-## 🎯 Informações do Card
-* **ID:** US-001
-* **Prioridade:** Alta
-* **Story Points:** 8
-* **Sprint:** 1
-
 ---
 
 ## 👤 História de Usuário
