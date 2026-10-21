@@ -16,7 +16,7 @@ Esta funcionalidade permite que qualquer usuário acesse a parte de contato do s
 Garantir o canal de comunicação aberto e funcional entre os utilizadores e a equipe do site, assegurando que as mensagens e ficheiros são submetidos sem falhas.
 
 ### 🔧 Requisitos Técnicos
-* Validação de campos obrigatórios no formulário de contacto
+* Validação de campos obrigatórios no formulário de contato
 * Suporte a upload de arquivos/documentos
 * Tratamento de pop-up de confirmação (alerta do navegador)
 
@@ -76,7 +76,7 @@ Garantir o canal de comunicação aberto e funcional entre os utilizadores e a e
 
 ### Resultados Específicos por Etapa
 * **Etapa 1-3 (Acesso ao Site):** A página inicial do Automation Exercise carrega completamente; todos os elementos visuais estão visíveis; não há erros de carregamento.
-* **Etapa 4-5 (Navegação para Contacto):** O redirecionamento ocorre corretamente e o título "GET IN TOUCH" é exibido na interface.
+* **Etapa 4-5 (Navegação para Contato):** O redirecionamento ocorre corretamente e o título "GET IN TOUCH" é exibido na interface.
 * **Etapa 6-8 (Preenchimento e Submissão):** Os campos aceitam a digitação, o ficheiro é anexado com sucesso e o botão "Submit" aciona o alerta de confirmação.
 * **Etapa 9-10 (Confirmação do Envio):** Após clicar em OK no alerta, a mensagem verde de sucesso "Success! Your details have been submitted successfully." é apresentada de forma clara
 * **Etapa 11 (Retorno à Home):** O botão "Home" direciona o utilizador de volta à página principal do site sem falhas.
