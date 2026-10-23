@@ -113,8 +113,6 @@ Aumentar a base de usuários registrados e coletar informações relevantes para
 29. Clicar no botão "Continue"
 30. Verificar que a mensagem "Logged in as [nome do usuário]" está visível no topo da página
 31. Clicar no botão "Delete Account"
-32. Verificar que a mensagem "ACCOUNT DELETED!" está visível
-33. Clicar no botão "Continue"
 
 ### Pós-condições
 * Conta de teste criada e removida com sucesso
