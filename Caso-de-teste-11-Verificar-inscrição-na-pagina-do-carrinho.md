@@ -24,7 +24,7 @@ Capturar leads e endereços de e-mail dos visitantes para engajamento de marketi
 
 ## ✅ Critérios de Aceite
 
-* **Critério 1: Inscrição para atualizações e notícias sobre o site**  
+* **Critério 1: Navegação para o carrinho**  
   * **Dado** que estou na página inicial do site, 
   * **Quando** clico no botão "Cart",
   * **Então** devo ser redirecionado para página do carrinho e ver o texto "Shopping Cart".
