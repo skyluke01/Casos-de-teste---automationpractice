@@ -1,2 +1,3 @@
 # Casos de teste - automationpractice
-Casos de teste e automação de testes do site automation practice
+Casos de teste site automation practice
+Será adicionado futuramente a automação desses casos de teste
