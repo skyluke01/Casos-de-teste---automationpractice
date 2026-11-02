@@ -1,0 +1,1157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5 (Python 3.12.10 on win32)" generated="2026-11-02T19:37:40.426842" rpa="false" schemaversion="5">
+<suite id="s1" name="Casos de teste - automationpractice" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice">
+<suite id="s1-s1" name="Automação de testes" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes">
+<suite id="s1-s1-s1" name="Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests">
+<suite id="s1-s1-s1-s1" name="Login" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\login">
+<suite id="s1-s1-s1-s1-s1" name="Login Realizado.Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\login\login_realizado.tests.robot">
+<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:40.841027" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-02T19:37:40.841027" elapsed="4.633756"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-02T19:37:45.474783" elapsed="0.020473"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:37:40.839897" elapsed="4.656863"/>
+</kw>
+<test id="s1-s1-s1-s1-s1-t1" name="Login realizado com sucesso" line="11">
+<kw name="Dado que o usuário está na página de login" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:37:45.501293" elapsed="0.012144"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:45.513437" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:45.513437" elapsed="1.753919"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.267356" elapsed="0.012247"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:47.288623" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.280602" elapsed="0.008021"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.288623" elapsed="0.001000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:47.292127" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.289623" elapsed="0.003008"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.292631" elapsed="0.000000"/>
+</kw>
+<doc>Verifica a página inicial, clica no botão de login e valida a página de destino.</doc>
+<status status="PASS" start="2026-11-02T19:37:45.499789" elapsed="1.792842"/>
+</kw>
+<kw name="Quando o usuário insere credenciais" owner="login_realizado.keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:47.294632" level="INFO">Typing text 'johnteste@gmail.com' into text field 'css:input[data-qa="login-email"]'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.294632" elapsed="0.042415"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:47.337551" level="INFO">Typing text 'SenhaForte123@' into text field 'css:input[data-qa="login-password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.337551" elapsed="0.037226"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:47.381294" level="INFO">${EMAIL_EM_TELA} = johnteste@gmail.com</msg>
+<var>${EMAIL_EM_TELA}</var>
+<arg>${CAMPO_EMAIL}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.374777" elapsed="0.007521"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${EMAIL_EM_TELA}</arg>
+<arg>${email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.382298" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:47.389386" level="INFO">${SENHA_EM_TELA} = SenhaForte123@</msg>
+<var>${SENHA_EM_TELA}</var>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.382298" elapsed="0.007088"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SENHA_EM_TELA}</arg>
+<arg>${senha}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.389386" elapsed="0.000999"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${SENHA}</arg>
+<doc>Insere o email e a senha nos campos correspondentes.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.293632" elapsed="0.096753"/>
+</kw>
+<kw name="E clica no botão de login" owner="login_realizado.keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:47.393642" level="INFO">Clicking button 'css:button[data-qa="login-button"]'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.392581" elapsed="0.054000"/>
+</kw>
+<doc>Clica no botão de login.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.391582" elapsed="0.055509"/>
+</kw>
+<kw name="Então o usuário deve ser redirecionado para a página inicial" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_INICIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.449606" elapsed="2.382843"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:49.839479" level="INFO">${TITULO_EM_TELA} = AutomationExercise</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_INICIAL}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:49.832449" elapsed="0.007030"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_INICIAL}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:49.839479" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:49.842985" level="INFO">${TITULO_ABA} = Automation Exercise</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:37:49.839479" elapsed="0.004008"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_INICIAL}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:49.843487" elapsed="0.000000"/>
+</kw>
+<doc>Verifica o redirecionamento para a página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:37:47.448598" elapsed="2.394889"/>
+</kw>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:37:49.844490" elapsed="2.169595"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:37:49.844490" elapsed="2.169595"/>
+</kw>
+<doc>Verifica se o login foi realizado com sucesso utilizando credenciais válidas.</doc>
+<status status="PASS" start="2026-11-02T19:37:45.496760" elapsed="6.517325"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t2" name="Falha no login com Senha inválida" line="19">
+<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:52.019624" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-02T19:37:52.019624" elapsed="4.472487"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-02T19:37:56.492111" elapsed="0.019985"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:37:52.019624" elapsed="4.492472"/>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:37:56.515149" elapsed="0.012203"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:56.527855" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:56.527352" elapsed="1.542736"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.070088" elapsed="0.010911"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:58.088790" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.080999" elapsed="0.007791"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.088790" elapsed="0.001004"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:58.092300" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.089794" elapsed="0.002506"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.092300" elapsed="0.001602"/>
+</kw>
+<doc>Verifica a página inicial, clica no botão de login e valida a página de destino.</doc>
+<status status="PASS" start="2026-11-02T19:37:56.512096" elapsed="1.581806"/>
+</kw>
+<kw name="Quando o usuário insere credenciais" owner="login_realizado.keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:58.094905" level="INFO">Typing text 'johnteste@gmail.com' into text field 'css:input[data-qa="login-email"]'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.094905" elapsed="0.043523"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:58.138428" level="INFO">Typing text 'SenhaFraca123' into text field 'css:input[data-qa="login-password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.138428" elapsed="0.032656"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:58.191142" level="INFO">${EMAIL_EM_TELA} = johnteste@gmail.com</msg>
+<var>${EMAIL_EM_TELA}</var>
+<arg>${CAMPO_EMAIL}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.171084" elapsed="0.021561"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${EMAIL_EM_TELA}</arg>
+<arg>${email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.192645" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:58.199886" level="INFO">${SENHA_EM_TELA} = SenhaFraca123</msg>
+<var>${SENHA_EM_TELA}</var>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.193650" elapsed="0.007738"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SENHA_EM_TELA}</arg>
+<arg>${senha}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.201388" elapsed="0.000000"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${SENHA_INVALIDA}</arg>
+<doc>Insere o email e a senha nos campos correspondentes.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.094905" elapsed="0.106483"/>
+</kw>
+<kw name="E clica no botão de login" owner="login_realizado.keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:58.204898" level="INFO">Clicking button 'css:button[data-qa="login-button"]'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.204898" elapsed="1.349242"/>
+</kw>
+<doc>Clica no botão de login.</doc>
+<status status="PASS" start="2026-11-02T19:37:58.202392" elapsed="1.351748"/>
+</kw>
+<kw name="Então o sistema deve exibir uma mensagem de erro" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_MENSAGEM_ERRO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:37:59.555149" elapsed="0.019893"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:37:59.580565" level="INFO">${TEXTO_ERRO_EM_TELA} = Your email or password is incorrect!</msg>
+<var>${TEXTO_ERRO_EM_TELA}</var>
+<arg>${CAMPO_MENSAGEM_ERRO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:37:59.575042" elapsed="0.005523"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TEXTO_ERRO_EM_TELA}</arg>
+<arg>${MENSAGEM_ERRO_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:37:59.582069" elapsed="0.000000"/>
+</kw>
+<arg>${MENSAGEM_ERRO_LOGIN}</arg>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com credenciais inválidas.</doc>
+<status status="PASS" start="2026-11-02T19:37:59.555149" elapsed="0.026920"/>
+</kw>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:37:59.584096" elapsed="2.130347"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:37:59.583594" elapsed="2.131850"/>
+</kw>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com credenciais email válidas e senha inválida.</doc>
+<status status="PASS" start="2026-11-02T19:37:52.017112" elapsed="9.698332"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t3" name="Falha no login com Email inválido" line="28">
+<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:01.720963" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-02T19:38:01.720963" elapsed="4.309268"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-02T19:38:06.030740" elapsed="0.029412"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:38:01.720963" elapsed="4.339189"/>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:06.061656" elapsed="0.010551"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:06.072207" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:06.072207" elapsed="1.763693"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.835900" elapsed="0.021645"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:07.866065" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.857545" elapsed="0.008520"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.866065" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:07.868571" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.866065" elapsed="0.002506"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.868571" elapsed="0.000000"/>
+</kw>
+<doc>Verifica a página inicial, clica no botão de login e valida a página de destino.</doc>
+<status status="PASS" start="2026-11-02T19:38:06.060152" elapsed="1.809922"/>
+</kw>
+<kw name="Quando o usuário insere credenciais" owner="login_realizado.keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:07.872581" level="INFO">Typing text 'usuarioinvalido@gmail.com' into text field 'css:input[data-qa="login-email"]'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.872581" elapsed="0.038599"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:07.912683" level="INFO">Typing text 'SenhaForte123@' into text field 'css:input[data-qa="login-password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.911180" elapsed="0.067115"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:07.985819" level="INFO">${EMAIL_EM_TELA} = usuarioinvalido@gmail.com</msg>
+<var>${EMAIL_EM_TELA}</var>
+<arg>${CAMPO_EMAIL}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.978295" elapsed="0.007524"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${EMAIL_EM_TELA}</arg>
+<arg>${email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.985819" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:07.993340" level="INFO">${SENHA_EM_TELA} = SenhaForte123@</msg>
+<var>${SENHA_EM_TELA}</var>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.987322" elapsed="0.006018"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SENHA_EM_TELA}</arg>
+<arg>${senha}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.993340" elapsed="0.000000"/>
+</kw>
+<arg>${EMAIL_INVALIDO}</arg>
+<arg>${SENHA}</arg>
+<doc>Insere o email e a senha nos campos correspondentes.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.871078" elapsed="0.122262"/>
+</kw>
+<kw name="E clica no botão de login" owner="login_realizado.keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:07.995847" level="INFO">Clicking button 'css:button[data-qa="login-button"]'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.995847" elapsed="0.035092"/>
+</kw>
+<doc>Clica no botão de login.</doc>
+<status status="PASS" start="2026-11-02T19:38:07.994844" elapsed="0.036095"/>
+</kw>
+<kw name="Então o sistema deve exibir uma mensagem de erro" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_MENSAGEM_ERRO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:08.033445" elapsed="1.636584"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:09.677550" level="INFO">${TEXTO_ERRO_EM_TELA} = Your email or password is incorrect!</msg>
+<var>${TEXTO_ERRO_EM_TELA}</var>
+<arg>${CAMPO_MENSAGEM_ERRO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:09.670029" elapsed="0.008524"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TEXTO_ERRO_EM_TELA}</arg>
+<arg>${MENSAGEM_ERRO_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:09.678553" elapsed="0.000502"/>
+</kw>
+<arg>${MENSAGEM_ERRO_LOGIN}</arg>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com credenciais inválidas.</doc>
+<status status="PASS" start="2026-11-02T19:38:08.032442" elapsed="1.646613"/>
+</kw>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:38:09.680058" elapsed="2.118653"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:38:09.680058" elapsed="2.118653"/>
+</kw>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com email inválido e senha válida.</doc>
+<status status="PASS" start="2026-11-02T19:38:01.718454" elapsed="10.080257"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t4" name="Falha no login com Email e Senha inválidos" line="37">
+<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:11.805228" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-02T19:38:11.803725" elapsed="4.741991"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-02T19:38:16.545716" elapsed="0.021903"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:38:11.803725" elapsed="4.763894"/>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:16.569125" elapsed="0.010619"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:16.579744" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:16.579744" elapsed="1.563864"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.143608" elapsed="0.010025"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:18.162657" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.153633" elapsed="0.009024"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.162657" elapsed="0.001003"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:18.166166" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.163660" elapsed="0.002506"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.166166" elapsed="0.000000"/>
+</kw>
+<doc>Verifica a página inicial, clica no botão de login e valida a página de destino.</doc>
+<status status="PASS" start="2026-11-02T19:38:16.568122" elapsed="1.598044"/>
+</kw>
+<kw name="Quando o usuário insere credenciais" owner="login_realizado.keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:18.168672" level="INFO">Typing text 'usuarioinvalido@gmail.com' into text field 'css:input[data-qa="login-email"]'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.168672" elapsed="0.044122"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:18.213798" level="INFO">Typing text 'SenhaFraca123' into text field 'css:input[data-qa="login-password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.213798" elapsed="0.039101"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:18.269268" level="INFO">${EMAIL_EM_TELA} = usuarioinvalido@gmail.com</msg>
+<var>${EMAIL_EM_TELA}</var>
+<arg>${CAMPO_EMAIL}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.252899" elapsed="0.016369"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${EMAIL_EM_TELA}</arg>
+<arg>${email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.269268" elapsed="0.001003"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:18.277800" level="INFO">${SENHA_EM_TELA} = SenhaFraca123</msg>
+<var>${SENHA_EM_TELA}</var>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.270271" elapsed="0.007529"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SENHA_EM_TELA}</arg>
+<arg>${senha}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.277800" elapsed="0.000000"/>
+</kw>
+<arg>${EMAIL_INVALIDO}</arg>
+<arg>${SENHA_INVALIDA}</arg>
+<doc>Insere o email e a senha nos campos correspondentes.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.167669" elapsed="0.110131"/>
+</kw>
+<kw name="E clica no botão de login" owner="login_realizado.keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:18.281889" level="INFO">Clicking button 'css:button[data-qa="login-button"]'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.280386" elapsed="1.692097"/>
+</kw>
+<doc>Clica no botão de login.</doc>
+<status status="PASS" start="2026-11-02T19:38:18.280386" elapsed="1.693096"/>
+</kw>
+<kw name="Então o sistema deve exibir uma mensagem de erro" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_MENSAGEM_ERRO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:19.973985" elapsed="0.007443"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:19.988635" level="INFO">${TEXTO_ERRO_EM_TELA} = Your email or password is incorrect!</msg>
+<var>${TEXTO_ERRO_EM_TELA}</var>
+<arg>${CAMPO_MENSAGEM_ERRO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:19.981428" elapsed="0.007207"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TEXTO_ERRO_EM_TELA}</arg>
+<arg>${MENSAGEM_ERRO_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:19.988635" elapsed="0.001014"/>
+</kw>
+<arg>${MENSAGEM_ERRO_LOGIN}</arg>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com credenciais inválidas.</doc>
+<status status="PASS" start="2026-11-02T19:38:19.973985" elapsed="0.015664"/>
+</kw>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:38:19.990648" elapsed="2.115240"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:38:19.990648" elapsed="2.115240"/>
+</kw>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com email e senha inválidos.</doc>
+<status status="PASS" start="2026-11-02T19:38:11.801216" elapsed="10.304672"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t5" name="Falha no login com Email em branco" line="46">
+<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:22.111418" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-02T19:38:22.111418" elapsed="4.270480"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-02T19:38:26.381898" elapsed="0.018666"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:38:22.111418" elapsed="4.290649"/>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:26.402067" elapsed="0.011133"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:26.414204" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:26.414204" elapsed="1.322119"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.736323" elapsed="0.008545"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.752924" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.744868" elapsed="0.008056"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.752924" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.756934" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.752924" elapsed="0.004010"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.756934" elapsed="0.000000"/>
+</kw>
+<doc>Verifica a página inicial, clica no botão de login e valida a página de destino.</doc>
+<status status="PASS" start="2026-11-02T19:38:26.402067" elapsed="1.354867"/>
+</kw>
+<kw name="Quando o usuário insere credenciais" owner="login_realizado.keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.759945" level="INFO">Typing text '' into text field 'css:input[data-qa="login-email"]'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.759945" elapsed="0.032805"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.793758" level="INFO">Typing text 'SenhaForte123@' into text field 'css:input[data-qa="login-password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.792750" elapsed="0.033586"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.833854" level="INFO">${EMAIL_EM_TELA} = </msg>
+<var>${EMAIL_EM_TELA}</var>
+<arg>${CAMPO_EMAIL}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.827840" elapsed="0.006014"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${EMAIL_EM_TELA}</arg>
+<arg>${email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.833854" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.840368" level="INFO">${SENHA_EM_TELA} = SenhaForte123@</msg>
+<var>${SENHA_EM_TELA}</var>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.833854" elapsed="0.006514"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SENHA_EM_TELA}</arg>
+<arg>${senha}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.840368" elapsed="0.001003"/>
+</kw>
+<arg>${EMAIL_EM_BRANCO}</arg>
+<arg>${SENHA}</arg>
+<doc>Insere o email e a senha nos campos correspondentes.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.758942" elapsed="0.082429"/>
+</kw>
+<kw name="E clica no botão de login" owner="login_realizado.keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.842874" level="INFO">Clicking button 'css:button[data-qa="login-button"]'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.842874" elapsed="0.055154"/>
+</kw>
+<doc>Clica no botão de login.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.841371" elapsed="0.056657"/>
+</kw>
+<kw name="Então não devo ser redirecionado para a página inicial" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.899031" elapsed="0.009023"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.914070" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.908054" elapsed="0.006016"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.914070" elapsed="0.001502"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:27.917576" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.915572" elapsed="0.002507"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.918079" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se o usuário não foi redirecionado para a página inicial após tentar realizar o login com credenciais inválidas.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.899031" elapsed="0.019048"/>
+</kw>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.919082" elapsed="2.134181"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:38:27.919082" elapsed="2.134181"/>
+</kw>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com email em branco.</doc>
+<status status="PASS" start="2026-11-02T19:38:22.108912" elapsed="7.944902"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t6" name="Falha no login com Senha em branco" line="55">
+<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:30.058826" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-02T19:38:30.058826" elapsed="4.341553"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-02T19:38:34.400379" elapsed="0.022253"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:38:30.058826" elapsed="4.363806"/>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:34.424152" elapsed="0.008569"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:34.434947" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:34.432721" elapsed="1.273462"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.706183" elapsed="0.010627"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.724330" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.716810" elapsed="0.009022"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.725832" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.728337" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.726835" elapsed="0.002504"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.729339" elapsed="0.000000"/>
+</kw>
+<doc>Verifica a página inicial, clica no botão de login e valida a página de destino.</doc>
+<status status="PASS" start="2026-11-02T19:38:34.422632" elapsed="1.306707"/>
+</kw>
+<kw name="Quando o usuário insere credenciais" owner="login_realizado.keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.731845" level="INFO">Typing text 'johnteste@gmail.com' into text field 'css:input[data-qa="login-email"]'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.730841" elapsed="0.045650"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.777995" level="INFO">Typing text '' into text field 'css:input[data-qa="login-password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.776491" elapsed="0.052821"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.839348" level="INFO">${EMAIL_EM_TELA} = johnteste@gmail.com</msg>
+<var>${EMAIL_EM_TELA}</var>
+<arg>${CAMPO_EMAIL}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.829312" elapsed="0.010036"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${EMAIL_EM_TELA}</arg>
+<arg>${email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.839348" elapsed="0.000999"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.847948" level="INFO">${SENHA_EM_TELA} = </msg>
+<var>${SENHA_EM_TELA}</var>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.840347" elapsed="0.007601"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SENHA_EM_TELA}</arg>
+<arg>${senha}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.849460" elapsed="0.000000"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${SENHA_EM_BRANCO}</arg>
+<doc>Insere o email e a senha nos campos correspondentes.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.729339" elapsed="0.120121"/>
+</kw>
+<kw name="E clica no botão de login" owner="login_realizado.keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.852972" level="INFO">Clicking button 'css:button[data-qa="login-button"]'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.852972" elapsed="0.045014"/>
+</kw>
+<doc>Clica no botão de login.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.850464" elapsed="0.047522"/>
+</kw>
+<kw name="Então não devo ser redirecionado para a página inicial" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.902002" elapsed="0.008554"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.918083" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.910556" elapsed="0.007527"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.918586" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:35.922097" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.918586" elapsed="0.003511"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.922097" elapsed="0.001005"/>
+</kw>
+<doc>Verifica se o usuário não foi redirecionado para a página inicial após tentar realizar o login com credenciais inválidas.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.900500" elapsed="0.022602"/>
+</kw>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.924605" elapsed="2.125734"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:38:35.923102" elapsed="2.127237"/>
+</kw>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com senha em branco.</doc>
+<status status="PASS" start="2026-11-02T19:38:30.056320" elapsed="7.994019"/>
+</test>
+<test id="s1-s1-s1-s1-s1-t7" name="Falha no login com Email e Senha em branco" line="64">
+<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:38.057858" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-02T19:38:38.057858" elapsed="4.185366"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-02T19:38:42.244227" elapsed="0.018360"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-02T19:38:38.057858" elapsed="4.204729"/>
+</kw>
+<kw name="Dado que o usuário está na página de login" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:42.264673" elapsed="0.012194"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:42.277383" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
+<arg>${BOTAO_MENU_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:42.276867" elapsed="2.382362"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.659229" elapsed="0.011080"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.678837" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.670309" elapsed="0.008528"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.679347" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.681854" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.679347" elapsed="0.002507"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.681854" elapsed="0.001005"/>
+</kw>
+<doc>Verifica a página inicial, clica no botão de login e valida a página de destino.</doc>
+<status status="PASS" start="2026-11-02T19:38:42.264169" elapsed="2.418690"/>
+</kw>
+<kw name="Quando o usuário insere credenciais" owner="login_realizado.keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.685767" level="INFO">Typing text '' into text field 'css:input[data-qa="login-email"]'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>${email}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.685767" elapsed="0.032422"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.718189" level="INFO">Typing text '' into text field 'css:input[data-qa="login-password"]'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>${senha}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.718189" elapsed="0.031104"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.758327" level="INFO">${EMAIL_EM_TELA} = </msg>
+<var>${EMAIL_EM_TELA}</var>
+<arg>${CAMPO_EMAIL}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.749293" elapsed="0.010038"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${EMAIL_EM_TELA}</arg>
+<arg>${email}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.759331" elapsed="0.000000"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.765975" level="INFO">${SENHA_EM_TELA} = </msg>
+<var>${SENHA_EM_TELA}</var>
+<arg>${CAMPO_SENHA}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.759331" elapsed="0.006644"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SENHA_EM_TELA}</arg>
+<arg>${senha}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.765975" elapsed="0.000000"/>
+</kw>
+<arg>${EMAIL_EM_BRANCO}</arg>
+<arg>${SENHA_EM_BRANCO}</arg>
+<doc>Insere o email e a senha nos campos correspondentes.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.684763" elapsed="0.081212"/>
+</kw>
+<kw name="E clica no botão de login" owner="login_realizado.keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.767990" level="INFO">Clicking button 'css:button[data-qa="login-button"]'.</msg>
+<arg>${BOTAO_LOGIN}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.767990" elapsed="0.055341"/>
+</kw>
+<doc>Clica no botão de login.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.767477" elapsed="0.055854"/>
+</kw>
+<kw name="Então não devo ser redirecionado para a página inicial" owner="login_realizado.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.825838" elapsed="0.006020"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.839530" level="INFO">${TITULO_EM_TELA} = Login to your account</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_LOGIN}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.831858" elapsed="0.007672"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.839530" elapsed="0.001006"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-02T19:38:44.843049" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.840536" elapsed="0.002513"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_LOGIN}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.843049" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se o usuário não foi redirecionado para a página inicial após tentar realizar o login com credenciais inválidas.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.824834" elapsed="0.018215"/>
+</kw>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.845005" elapsed="2.123158"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:38:44.845005" elapsed="2.123158"/>
+</kw>
+<doc>Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o login com email e senha em branco.</doc>
+<status status="PASS" start="2026-11-02T19:38:38.053848" elapsed="8.914818"/>
+</test>
+<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-02T19:38:46.972678" elapsed="0.000000"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-02T19:38:46.971674" elapsed="0.001004"/>
+</kw>
+<status status="PASS" start="2026-11-02T19:37:40.468472" elapsed="66.504206"/>
+</suite>
+<status status="PASS" start="2026-11-02T19:37:40.465966" elapsed="66.508214"/>
+</suite>
+<status status="PASS" start="2026-11-02T19:37:40.463459" elapsed="66.513231"/>
+</suite>
+<status status="PASS" start="2026-11-02T19:37:40.459950" elapsed="66.518766"/>
+</suite>
+<status status="PASS" start="2026-11-02T19:37:40.434864" elapsed="66.545910"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Casos de teste - automationpractice" id="s1" pass="7" fail="0" skip="0">Casos de teste - automationpractice</stat>
+<stat name="Automação de testes" id="s1-s1" pass="7" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes</stat>
+<stat name="Tests" id="s1-s1-s1" pass="7" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests</stat>
+<stat name="Login" id="s1-s1-s1-s1" pass="7" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Login</stat>
+<stat name="Login Realizado.Tests" id="s1-s1-s1-s1-s1" pass="7" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Login.Login Realizado.Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

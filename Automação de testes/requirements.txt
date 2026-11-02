@@ -1,0 +1,6 @@
+robotframework
+robotframework-browser
+robotframework-seleniumlibrary
+
+#Instala:   pip install -r requirements.txt
+#Atualiza:  pip install  --upgrade requirements.txt
