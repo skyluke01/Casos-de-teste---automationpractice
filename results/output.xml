@@ -1,549 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-06T20:35:15.848534" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-09T13:19:42.461062" rpa="false" schemaversion="5">
 <suite id="s1" name="Casos de teste - automationpractice" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice">
 <suite id="s1-s1" name="Automação de testes" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes">
 <suite id="s1-s1-s1" name="Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests">
-<suite id="s1-s1-s1-s1" name="Formulario Contato" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\formulario_contato">
-<suite id="s1-s1-s1-s1-s1" name="Formulario Contato.Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\formulario_contato\formulario_contato.tests.robot">
+<suite id="s1-s1-s1-s1" name="Pagina Casos De Teste" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\pagina_casos_de_teste">
+<suite id="s1-s1-s1-s1-s1" name="Pagina Casos De Teste.Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\pagina_casos_de_teste\pagina_casos_de_teste.tests.robot">
 <kw name="Abrir navegador" owner="cadastro_realizado.keywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:16.260781" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<msg time="2026-11-09T13:19:42.885801" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
 <arg>${URL_PAGINA_INICIAL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-06T20:35:16.259431" elapsed="4.415248"/>
+<status status="PASS" start="2026-11-09T13:19:42.885286" elapsed="4.461898"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-06T20:35:20.674679" elapsed="0.021339"/>
+<status status="PASS" start="2026-11-09T13:19:47.347184" elapsed="0.026573"/>
 </kw>
 <doc>Abre o navegador na página inicial.</doc>
-<status status="PASS" start="2026-11-06T20:35:16.259431" elapsed="4.436587"/>
+<status status="PASS" start="2026-11-09T13:19:42.883759" elapsed="4.489998"/>
 </kw>
-<test id="s1-s1-s1-s1-s1-t1" name="Acesso à Página de Contato" line="12">
+<test id="s1-s1-s1-s1-s1-t1" name="Acesso à Página de Casos de teste" line="12">
 <kw name="Dado que estou na página inicial do site" owner="cadastro_realizado.keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_MENU_CADASTRO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:20.701033" elapsed="0.012281"/>
+<status status="PASS" start="2026-11-09T13:19:47.378772" elapsed="0.010030"/>
 </kw>
 <doc>Verifica a página inicial e aguarda o botão de cadastro/login aparecer.</doc>
-<status status="PASS" start="2026-11-06T20:35:20.700028" elapsed="0.013286"/>
+<status status="PASS" start="2026-11-09T13:19:47.377268" elapsed="0.012537"/>
 </kw>
-<kw name="Quando clico no botão &quot;Contact us&quot;" owner="formulario_contato.keywords">
+<kw name="Quando clico no botão &quot;Test Cases&quot;" owner="pagina_casos_de_teste.keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:20.716443" level="INFO">Clicking element 'css:a[href="/contact_us"]'.</msg>
-<arg>${BOTAO_MENU_CONTATO}</arg>
+<msg time="2026-11-09T13:19:47.392311" level="INFO">Clicking element '//*[@id="header"]/div/div/div/div[2]/div/ul/li[5]/a'.</msg>
+<arg>${BOTAO_TEST_CASE}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:20.715444" elapsed="1.774318"/>
+<status status="PASS" start="2026-11-09T13:19:47.392311" elapsed="2.726452"/>
 </kw>
-<doc>Clica no botão "Contact Us" no menu superior</doc>
-<status status="PASS" start="2026-11-06T20:35:20.714313" elapsed="1.776960"/>
+<doc>Clica no botão Test Cases</doc>
+<status status="PASS" start="2026-11-09T13:19:47.389805" elapsed="2.728958"/>
 </kw>
-<kw name="Então devo ser redirecionado para a página de contato e verificar o texto &quot;CONTACT US&quot;" owner="formulario_contato.keywords">
+<kw name="Então devo ser redirecionado para a página de casos de teste e ver o texto &quot;TEST CASES&quot;" owner="pagina_casos_de_teste.keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
+<arg>${ID_NOME_PAGINA_CASOS_DE_TESTE}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.493780" elapsed="0.007045"/>
+<status status="PASS" start="2026-11-09T13:19:50.121270" elapsed="0.008529"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.510379" level="INFO">${TITULO_EM_TELA} = CONTACT US</msg>
+<msg time="2026-11-09T13:19:50.138823" level="INFO">${TITULO_EM_TELA} = TEST CASES</msg>
 <var>${TITULO_EM_TELA}</var>
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
+<arg>${ID_NOME_PAGINA_CASOS_DE_TESTE}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.500825" elapsed="0.009554"/>
+<status status="PASS" start="2026-11-09T13:19:50.129799" elapsed="0.009024"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${TITULO_EM_TELA}</arg>
-<arg>${TEXTO_TITULO_PAGINA_CONTATO}</arg>
+<arg>${NOME_PAGINA_CASOS_DE_TESTE}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.510379" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-09T13:19:50.139826" elapsed="0.000000"/>
 </kw>
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.514399" level="INFO">${TITULO_ABA} = Automation Exercise - Contact Us</msg>
+<msg time="2026-11-09T13:19:50.143333" level="INFO">${TITULO_ABA} = Automation Practice Website for UI Testing - Test Cases</msg>
 <var>${TITULO_ABA}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.510379" elapsed="0.004020"/>
+<status status="PASS" start="2026-11-09T13:19:50.139826" elapsed="0.004009"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${TITULO_ABA}</arg>
-<arg>${TITULO_ABA_CONTATO}</arg>
+<arg>${TITULO_PAGINA_CASOS_DE_TESTE}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.514399" elapsed="0.000504"/>
+<status status="PASS" start="2026-11-09T13:19:50.143835" elapsed="0.000000"/>
 </kw>
-<doc>Verifica o redirecionamento para a página de contato</doc>
-<status status="PASS" start="2026-11-06T20:35:22.492276" elapsed="0.022627"/>
+<doc>Verifica o redirecionamento para a página de casos de teste</doc>
+<status status="PASS" start="2026-11-09T13:19:50.119768" elapsed="0.024067"/>
 </kw>
-<status status="PASS" start="2026-11-06T20:35:20.696018" elapsed="1.819886"/>
-</test>
-<test id="s1-s1-s1-s1-s1-t2" name="Envio Bem-Sucedido do Formulário" line="18">
-<kw name="Dado que estou no formulário &quot;GET IN TOUCH&quot;" owner="formulario_contato.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.521934" elapsed="0.007074"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.536486" level="INFO">${TITULO_EM_TELA} = CONTACT US</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.530129" elapsed="0.006357"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${TEXTO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.536486" elapsed="0.001000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.539495" level="INFO">${TITULO_ABA} = Automation Exercise - Contact Us</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.537486" elapsed="0.002519"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_ABA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.540005" elapsed="0.000000"/>
-</kw>
-<doc>Verifica se está na página de contato</doc>
-<status status="PASS" start="2026-11-06T20:35:22.520424" elapsed="0.019581"/>
-</kw>
-<kw name="Quando preencho todos os campos obrigatórios do formulário de contato" owner="formulario_contato.keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.542520" level="INFO">Typing text 'John Teste' into text field 'css:input[data-qa="name"]'.</msg>
-<arg>${CAMPO_NOME}</arg>
-<arg>${nome}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.542520" elapsed="0.037145"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.581717" level="INFO">Typing text 'johnteste2@gmail.com' into text field 'css:input[data-qa="email"]'.</msg>
-<arg>${CAMPO_EMAIL}</arg>
-<arg>${email}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.581195" elapsed="0.051108"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.633307" level="INFO">Typing text 'Suporte Geral' into text field 'css:input[data-qa="subject"]'.</msg>
-<arg>${CAMPO_ASSUNTO}</arg>
-<arg>${assunto}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.632303" elapsed="0.041270"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.675076" level="INFO">Typing text 'Olá, gostaria de tirar uma dúvida sobre os produtos disponíveis na loja.' into text field 'message'.</msg>
-<arg>${ID_MENSAGEM}</arg>
-<arg>${mensagem}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.673573" elapsed="0.056142"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.729715" level="INFO">Sending C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\resource\imagens\imagem-teste-formulario.png to browser.</msg>
-<arg>${CAMPO_IMAGEM}</arg>
-<arg>${caminho_imagem}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.729715" elapsed="0.012588"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.748330" level="INFO">${NOME_EM_TELA} = John Teste</msg>
-<var>${NOME_EM_TELA}</var>
-<arg>${CAMPO_NOME}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.742303" elapsed="0.006027"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_EM_TELA}</arg>
-<arg>${nome}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.748330" elapsed="0.001504"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.762203" level="INFO">${EMAIL_EM_TELA} = johnteste2@gmail.com</msg>
-<var>${EMAIL_EM_TELA}</var>
-<arg>${CAMPO_EMAIL}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.749834" elapsed="0.013373"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${EMAIL_EM_TELA}</arg>
-<arg>${email}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.763207" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.768216" level="INFO">${ASSUNTO_EM_TELA} = Suporte Geral</msg>
-<var>${ASSUNTO_EM_TELA}</var>
-<arg>${CAMPO_ASSUNTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.763207" elapsed="0.005009"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ASSUNTO_EM_TELA}</arg>
-<arg>${assunto}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.768216" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.774877" level="INFO">${MENSAGEM_EM_TELA} = Olá, gostaria de tirar uma dúvida sobre os produtos disponíveis na loja.</msg>
-<var>${MENSAGEM_EM_TELA}</var>
-<arg>${ID_MENSAGEM}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.768216" elapsed="0.006661"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MENSAGEM_EM_TELA}</arg>
-<arg>${mensagem}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.775880" elapsed="0.000504"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.781443" level="INFO">${IMAGEM_EM_TELA} = C:\fakepath\imagem-teste-formulario.png</msg>
-<var>${IMAGEM_EM_TELA}</var>
-<arg>${CAMPO_IMAGEM}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.776384" elapsed="0.005059"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${IMAGEM_EM_TELA}</arg>
-<arg>imagem-teste-formulario.png</arg>
-<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.782448" elapsed="0.000000"/>
-</kw>
-<arg>${NOME}</arg>
-<arg>${EMAIL}</arg>
-<arg>${ASSUNTO}</arg>
-<arg>${MENSAGEM}</arg>
-<arg>${CAMINHO_IMAGEM}</arg>
-<doc>Preencher os campos nome, email, assunto, mensagem e anexa uma foto</doc>
-<status status="PASS" start="2026-11-06T20:35:22.541515" elapsed="0.240933"/>
-</kw>
-<kw name="E clico em &quot;Submit&quot; e confirmo no navegador" owner="formulario_contato.keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.784953" level="INFO">Clicking element 'name:submit'.</msg>
-<arg>${BOTAO_SUBMIT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.784953" elapsed="0.032308"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.818769" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<arg>action=ACCEPT</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.817261" elapsed="0.005137"/>
-</kw>
-<doc>Clica no botão submit e confirma através do popup do navegador</doc>
-<status status="PASS" start="2026-11-06T20:35:22.783950" elapsed="0.038448"/>
-</kw>
-<kw name="Então o sistema deve exibir a mensagem de sucesso &quot;Success! Your details have been submitted successfully.&quot;" owner="formulario_contato.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_MENSAGEM_DE_SUCESSO_FORMULARIO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.824905" elapsed="0.008531"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.841750" level="INFO">${MENSAGEM_EM_TELA} = Success! Your details have been submitted successfully.</msg>
-<var>${MENSAGEM_EM_TELA}</var>
-<arg>${ID_MENSAGEM_DE_SUCESSO_FORMULARIO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.834702" elapsed="0.007048"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MENSAGEM_EM_TELA}</arg>
-<arg>${MENSAGEM_DE_SUCESSO_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.841750" elapsed="0.001035"/>
-</kw>
-<doc>Validação da mensagem de sucesso</doc>
-<status status="PASS" start="2026-11-06T20:35:22.823901" elapsed="0.018884"/>
-</kw>
-<status status="PASS" start="2026-11-06T20:35:22.518409" elapsed="0.325375"/>
-</test>
-<test id="s1-s1-s1-s1-s1-t3" name="Acesso à Página de Contato (Envio Sem o Email)" line="26">
-<kw name="Dado que estou na página inicial do site" owner="cadastro_realizado.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_MENU_CADASTRO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.850334" elapsed="0.007682"/>
-</kw>
-<doc>Verifica a página inicial e aguarda o botão de cadastro/login aparecer.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.848303" elapsed="0.010219"/>
-</kw>
-<kw name="Quando clico no botão &quot;Contact us&quot;" owner="formulario_contato.keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:22.860548" level="INFO">Clicking element 'css:a[href="/contact_us"]'.</msg>
-<arg>${BOTAO_MENU_CONTATO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:22.860548" elapsed="1.685528"/>
-</kw>
-<doc>Clica no botão "Contact Us" no menu superior</doc>
-<status status="PASS" start="2026-11-06T20:35:22.858522" elapsed="1.687554"/>
-</kw>
-<kw name="Então devo ser redirecionado para a página de contato e verificar o texto &quot;CONTACT US&quot;" owner="formulario_contato.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.548584" elapsed="0.009026"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.566142" level="INFO">${TITULO_EM_TELA} = CONTACT US</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.557610" elapsed="0.008532"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${TEXTO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.566142" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.569650" level="INFO">${TITULO_ABA} = Automation Exercise - Contact Us</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.566142" elapsed="0.003508"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_ABA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.570152" elapsed="0.000000"/>
-</kw>
-<doc>Verifica o redirecionamento para a página de contato</doc>
-<status status="PASS" start="2026-11-06T20:35:24.546076" elapsed="0.024076"/>
-</kw>
-<status status="PASS" start="2026-11-06T20:35:22.846800" elapsed="1.724861"/>
-</test>
-<test id="s1-s1-s1-s1-s1-t4" name="Envio sem campo obrigatório (Envio sem Email)" line="33">
-<kw name="Dado que estou no formulário &quot;GET IN TOUCH&quot;" owner="formulario_contato.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.579181" elapsed="0.005035"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.592255" level="INFO">${TITULO_EM_TELA} = CONTACT US</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.584216" elapsed="0.008039"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${TEXTO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.593260" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.596289" level="INFO">${TITULO_ABA} = Automation Exercise - Contact Us</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.593260" elapsed="0.003029"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_ABA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.596289" elapsed="0.001084"/>
-</kw>
-<doc>Verifica se está na página de contato</doc>
-<status status="PASS" start="2026-11-06T20:35:24.577180" elapsed="0.020193"/>
-</kw>
-<kw name="Quando preencho todos os campos obrigatórios do formulário de contato" owner="formulario_contato.keywords">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.600175" level="INFO">Typing text 'John Teste' into text field 'css:input[data-qa="name"]'.</msg>
-<arg>${CAMPO_NOME}</arg>
-<arg>${nome}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.598374" elapsed="0.034141"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.632515" level="INFO">Typing text '' into text field 'css:input[data-qa="email"]'.</msg>
-<arg>${CAMPO_EMAIL}</arg>
-<arg>${email}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.632515" elapsed="0.027286"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.660304" level="INFO">Typing text 'Suporte Geral' into text field 'css:input[data-qa="subject"]'.</msg>
-<arg>${CAMPO_ASSUNTO}</arg>
-<arg>${assunto}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.660304" elapsed="0.056527"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.718225" level="INFO">Typing text 'Olá, gostaria de tirar uma dúvida sobre os produtos disponíveis na loja.' into text field 'message'.</msg>
-<arg>${ID_MENSAGEM}</arg>
-<arg>${mensagem}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.718225" elapsed="0.049874"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.769603" level="INFO">Sending C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\resource\imagens\imagem-teste-formulario.png to browser.</msg>
-<arg>${CAMPO_IMAGEM}</arg>
-<arg>${caminho_imagem}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.768099" elapsed="0.010029"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.785168" level="INFO">${NOME_EM_TELA} = John Teste</msg>
-<var>${NOME_EM_TELA}</var>
-<arg>${CAMPO_NOME}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.778128" elapsed="0.007040"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_EM_TELA}</arg>
-<arg>${nome}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.785168" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.792226" level="INFO">${EMAIL_EM_TELA} = </msg>
-<var>${EMAIL_EM_TELA}</var>
-<arg>${CAMPO_EMAIL}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.785168" elapsed="0.007058"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${EMAIL_EM_TELA}</arg>
-<arg>${email}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.792226" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.798744" level="INFO">${ASSUNTO_EM_TELA} = Suporte Geral</msg>
-<var>${ASSUNTO_EM_TELA}</var>
-<arg>${CAMPO_ASSUNTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.792226" elapsed="0.006518"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ASSUNTO_EM_TELA}</arg>
-<arg>${assunto}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.798744" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.804980" level="INFO">${MENSAGEM_EM_TELA} = Olá, gostaria de tirar uma dúvida sobre os produtos disponíveis na loja.</msg>
-<var>${MENSAGEM_EM_TELA}</var>
-<arg>${ID_MENSAGEM}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.799749" elapsed="0.005231"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MENSAGEM_EM_TELA}</arg>
-<arg>${mensagem}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.804980" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.812589" level="INFO">${IMAGEM_EM_TELA} = C:\fakepath\imagem-teste-formulario.png</msg>
-<var>${IMAGEM_EM_TELA}</var>
-<arg>${CAMPO_IMAGEM}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.804980" elapsed="0.007609"/>
-</kw>
-<kw name="Should Contain" owner="BuiltIn">
-<arg>${IMAGEM_EM_TELA}</arg>
-<arg>imagem-teste-formulario.png</arg>
-<doc>Fails if the `container` does not contain the `item` one or more times.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.812589" elapsed="0.000000"/>
-</kw>
-<arg>${NOME}</arg>
-<arg>${EMAIL_EM_BRANCO}</arg>
-<arg>${ASSUNTO}</arg>
-<arg>${MENSAGEM}</arg>
-<arg>${CAMINHO_IMAGEM}</arg>
-<doc>Preencher os campos nome, email, assunto, mensagem e anexa uma foto</doc>
-<status status="PASS" start="2026-11-06T20:35:24.598374" elapsed="0.215719"/>
-</kw>
-<kw name="E clico em &quot;Submit&quot;" owner="formulario_contato.keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.816602" level="INFO">Clicking element 'name:submit'.</msg>
-<arg>${BOTAO_SUBMIT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.816602" elapsed="0.028525"/>
-</kw>
-<doc>Clica no botão submit</doc>
-<status status="PASS" start="2026-11-06T20:35:24.815098" elapsed="0.031034"/>
-</kw>
-<kw name="Então o sistema não deve me redirecionar para outra página" owner="formulario_contato.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.848639" elapsed="0.006020"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.862183" level="INFO">${TITULO_EM_TELA} = CONTACT US</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${CAMPO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.854659" elapsed="0.008526"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${TEXTO_TITULO_PAGINA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.863185" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-06T20:35:24.865691" level="INFO">${TITULO_ABA} = Automation Exercise - Contact Us</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.863185" elapsed="0.002506"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_ABA_CONTATO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.865691" elapsed="0.000000"/>
-</kw>
-<doc>Verifica se não foi redirecionado por falta de campo obrigadotório</doc>
-<status status="PASS" start="2026-11-06T20:35:24.847635" elapsed="0.018056"/>
-</kw>
-<status status="PASS" start="2026-11-06T20:35:24.574675" elapsed="0.293522"/>
+<status status="PASS" start="2026-11-09T13:19:47.373757" elapsed="2.771081"/>
 </test>
 <kw name="Fechar navegador" owner="cadastro_realizado.keywords" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.870702" elapsed="2.141954"/>
+<status status="PASS" start="2026-11-09T13:19:50.148849" elapsed="2.130220"/>
 </kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2026-11-06T20:35:24.870702" elapsed="2.141954"/>
+<status status="PASS" start="2026-11-09T13:19:50.148849" elapsed="2.130220"/>
 </kw>
-<status status="PASS" start="2026-11-06T20:35:15.885347" elapsed="11.127309"/>
+<status status="PASS" start="2026-11-09T13:19:42.500980" elapsed="9.778089"/>
 </suite>
-<status status="PASS" start="2026-11-06T20:35:15.883844" elapsed="11.132322"/>
+<status status="PASS" start="2026-11-09T13:19:42.498475" elapsed="9.783768"/>
 </suite>
-<status status="PASS" start="2026-11-06T20:35:15.880698" elapsed="11.136972"/>
+<status status="PASS" start="2026-11-09T13:19:42.495724" elapsed="9.788022"/>
 </suite>
-<status status="PASS" start="2026-11-06T20:35:15.878192" elapsed="11.141482"/>
+<status status="PASS" start="2026-11-09T13:19:42.488677" elapsed="9.799583"/>
 </suite>
-<status status="PASS" start="2026-11-06T20:35:15.856118" elapsed="11.165572"/>
+<status status="PASS" start="2026-11-09T13:19:42.468579" elapsed="9.822692"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Casos de teste - automationpractice" id="s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice</stat>
-<stat name="Automação de testes" id="s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes</stat>
-<stat name="Tests" id="s1-s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests</stat>
-<stat name="Formulario Contato" id="s1-s1-s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Formulario Contato</stat>
-<stat name="Formulario Contato.Tests" id="s1-s1-s1-s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Formulario Contato.Formulario Contato.Tests</stat>
+<stat name="Casos de teste - automationpractice" id="s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice</stat>
+<stat name="Automação de testes" id="s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes</stat>
+<stat name="Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests</stat>
+<stat name="Pagina Casos De Teste" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Pagina Casos De Teste</stat>
+<stat name="Pagina Casos De Teste.Tests" id="s1-s1-s1-s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Pagina Casos De Teste.Pagina Casos De Teste.Tests</stat>
 </suite>
 </statistics>
 <errors>
