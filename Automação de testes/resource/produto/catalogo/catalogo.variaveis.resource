@@ -40,7 +40,7 @@ ${PRECO}    css:div.product-information span span
 ${DISPONIBILIDADE}    css:div.product-information p:nth-of-type(2) b
 ${CONDICAO}    css:div.product-information p:nth-of-type(3) b
 ${MARCA}    css:div.product-information p:nth-of-type(4) b
-
-
-
-
+${ID_QUANTIDADE}    quantity
+${BOTAO_ADICIONAR_AO_CARRINHO_PAGINA_VER_ITEM}    //button[normalize-space()='Add to cart']
+${ID_MENSAGEM_SUCESSO_ADICIONADO_AO_CARRINHO}    //h4[@class='modal-title w-100']    
+${MENSAGEM_SUCESSO_ADICIONADO_AO_CARRINHO}    Added!    
