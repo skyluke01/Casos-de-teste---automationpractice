@@ -12,19 +12,21 @@ Abrir navegador
     [Documentação]    Abre o navegador na página inicial.
     Open Browser    ${URL_PAGINA_INICIAL}    chrome
     Maximize Browser Window
-    #Set Selenium Speed    0.5s
+    Set Selenium Speed    0.5s
 
 Fechar navegador
     [Documentação]    Fecha o navegador.
     Close Browser
 
 que estou na página inicial do site
-    [Documentação]    Verifica a página inicial e aguarda o botão de cadastro/login aparecer.
-    Wait Until Element Is Visible    ${BOTAO_MENU_CADASTRO}
+    [Documentação]    Verifica se está na página inicial e se não estiver vai para ela
+    Go To    ${URL_PAGINA_INICIAL}
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_INICIAL}
 
 
 clico no botão "Signup / Login"
     [Documentação]    Clica no botão de cadastro/login.
+    Wait Until Element Is Visible    ${BOTAO_MENU_CADASTRO}
     Click Element    ${BOTAO_MENU_CADASTRO}
 
 
