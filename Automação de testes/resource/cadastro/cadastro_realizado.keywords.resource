@@ -12,7 +12,7 @@ Abrir navegador
     [Documentação]    Abre o navegador na página inicial.
     Open Browser    ${URL_PAGINA_INICIAL}    chrome
     Maximize Browser Window
-    Set Selenium Speed    0.5s
+    #Set Selenium Speed    0.5s
 
 Fechar navegador
     [Documentação]    Fecha o navegador.

@@ -92,6 +92,7 @@ ${BOTAO_MENU_CADASTRO}    css:a[href="/login"]
 ${BOTAO_EXCLUIR_CONTA}    css:a[href="/delete_account"]
 ${NOME_USUARIO_LOGADO}    //*[@id="header"]/div/div/div/div[2]/div/ul/li[10]/a
 ${MENSAGEM_USUARIO_LOGADO}    Logged in as ${NOME}
+${BOTAO_CARRINHO}    css:a[href="/view_cart"]
 
 ################################################################################### 
 # Elementos e valores página conta excluída
