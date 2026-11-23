@@ -71,7 +71,7 @@ Verifico os itens no carrinho
     ${NOME_PRIMEIRO_ITEM_EM_TELA}    Get Text    ${ID_CARRINHO_PRIMEIRO_ITEM}
     Should Be Equal As Strings    ${NOME_PRIMEIRO_ITEM_EM_TELA}    ${NOME_PRIMEIRO_ITEM}
 
-    #Verifica se o nome do item no primeiro carrinho está correto
+    #Verifica se o nome do segundo item no carrinho está correto
     ${NOME_SEGUNDO_ITEM_EM_TELA}    Get Text    ${ID_CARRINHO_SEGUNDO_ITEM}
     Should Be Equal As Strings    ${NOME_SEGUNDO_ITEM_EM_TELA}    ${NOME_SEGUNDO_ITEM}
 
