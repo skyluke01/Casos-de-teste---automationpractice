@@ -57,16 +57,16 @@ que estou na página de cadastro/login
 
 preencho as credenciais de cadastro com nome e email
     [Documentação]    Preenche os campos de nome e email com valores válidos.
-    [Arguments]    ${nome}    ${email}
-    Input Text    ${CAMPO_NOME_INICIAL}    ${nome}    ${True}
-    Input Text    ${CAMPO_EMAIL_INICIAL}    ${email}  ${True} 
+    [Arguments]    ${nome_cadastro}    ${email_cadastro}
+    Input Text    ${CAMPO_NOME_INICIAL}    ${nome_cadastro}    ${True}
+    Input Text    ${CAMPO_EMAIL_INICIAL}    ${email_cadastro}  ${True} 
 
     #verifico se o nome e email foram inseridos corretamente
     ${NOME_EM_TELA}=    Get Value    ${CAMPO_NOME_INICIAL }
-    Should Be Equal    ${NOME_EM_TELA}    ${nome}
+    Should Be Equal    ${NOME_EM_TELA}    ${nome_cadastro}
 
     ${EMAIL_EM_TELA}=    Get Value    ${CAMPO_EMAIL_INICIAL}
-    Should Be Equal    ${EMAIL_EM_TELA}    ${email}
+    Should Be Equal    ${EMAIL_EM_TELA}    ${email_cadastro}
 
 clico no botão "Signup"
     [Documentação]    Clica no botão de cadastro.
@@ -100,6 +100,7 @@ que estou no formulário "ENTER ACCOUNT INFORMATION"
 preencho todos os campos obrigatórios do formulário de cadastro
     [Documentação]    Preenche os campos obrigatórios do formulário de cadastro.
     [Argumentos]    ${senha}  ${dia_nascimento}  ${mes_nascimento}  ${ano_nascimento}
+    Click Element    ${ID_MR_FORMULARIO}
     Input Text    ${ID_SENHA_FORMULARIO}    ${senha}    ${True}
     Select From List By Value    ${ID_DIA_NASCIMENTO}    ${dia_nascimento}
     Select From List By Value    ${ID_MES_NASCIMENTO}    ${mes_nascimento}

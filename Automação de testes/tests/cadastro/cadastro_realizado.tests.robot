@@ -17,7 +17,7 @@ Acesso à página de cadastro
 Validação Inicial (Nome e Email)
     [Documentation]    Verifica se o usuário consegue avançar para o formulário completo de cadastro ao inserir um nome e email válidos.
     Dado que estou na página de cadastro/login
-    Quando preencho as credenciais de cadastro com nome e email   ${NOME}    ${EMAIL}
+    Quando preencho as credenciais de cadastro com nome e email   ${NOME_CADASTRO}    ${EMAIL_CADASTRO}
     E clico no botão "Signup"
     Então devo avançar para o formulário completo "ENTER ACCOUNT INFORMATION"
 
@@ -58,9 +58,10 @@ Acesso à Página de Cadastro (Email Duplicado)
 Validação (Email duplicado)
 
     Dado que estou na página de cadastro/login
-    Quando preencho as credenciais de cadastro com nome e email   ${NOME}    ${EMAIL_EXISTENTE}
+    Quando preencho as credenciais de cadastro com nome e email   ${NOME_CADASTRO}    ${EMAIL_EXISTENTE}
     E clico no botão "Signup"
     Então o sistema deve informar "Email Address already exist!"
+    [Teardown]    Fechar navegador
 
 Acesso à Página de Cadastro (Email em branco)
     [Documentação]    Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o cadastro com email já existente.
@@ -72,9 +73,10 @@ Acesso à Página de Cadastro (Email em branco)
 Validação (Email em branco)
 
     Dado que estou na página de cadastro/login
-    Quando preencho as credenciais de cadastro com nome e email   ${NOME}    ${EMAIL_EM_BRANCO}
+    Quando preencho as credenciais de cadastro com nome e email   ${NOME_CADASTRO}    ${EMAIL_EM_BRANCO}
     E clico no botão "Signup"
     Então não devo ser redirecionado para o formulário completo "ENTER ACCOUNT INFORMATION"
+    [Teardown]    Fechar navegador
 
 Acesso à Página de Cadastro (Nome em branco)
     [Documentação]    Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o cadastro com email já existente.
@@ -86,9 +88,10 @@ Acesso à Página de Cadastro (Nome em branco)
 Validação (Nome em branco)
 
     Dado que estou na página de cadastro/login
-    Quando preencho as credenciais de cadastro com nome e email   ${NOME_EM_BRANCO}    ${EMAIL}
+    Quando preencho as credenciais de cadastro com nome e email   ${NOME_EM_BRANCO}    ${EMAIL_CADASTRO}
     E clico no botão "Signup"
     Então não devo ser redirecionado para o formulário completo "ENTER ACCOUNT INFORMATION"
+    [Teardown]    Fechar navegador
 
 Acesso à Página de Cadastro (Nome e email em branco)
     [Documentação]    Verifica se o sistema exibe uma mensagem de erro ao tentar realizar o cadastro com email já existente.
@@ -103,3 +106,4 @@ Validação (Nome e email em branco)
     Quando preencho as credenciais de cadastro com nome e email   ${NOME_EM_BRANCO}    ${EMAIL_EM_BRANCO}
     E clico no botão "Signup"
     Então não devo ser redirecionado para o formulário completo "ENTER ACCOUNT INFORMATION"
+    [Teardown]    Fechar navegador
