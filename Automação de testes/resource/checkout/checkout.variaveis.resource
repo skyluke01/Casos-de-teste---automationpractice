@@ -30,10 +30,10 @@ ${ENDERECO_COBRANCA_ESTADO_CIDADE_CEP}    css:ul[id='address_invoice'] li[class=
 ${ENDERECO_COBRANCA_PAIS}    css:ul[id='address_invoice'] li[class='address_country_name']
 ${ENDERECO_COBRANCA_CELULAR}    css:ul[id='address_invoice'] li[class='address_phone']
 
-${ENDERECO_NOME}    Mr. Joao Teste
+${ENDERECO_NOME}    Mr. John Teste
 ${ENDERECO_EMPRESA}    TesteCompany
 ${ENDERECO_RUA}    Rua do teste 1504
-${ENDERECO_ESTAD0_CIDADE_CEP}    Florida Miami 47562000
+${ENDERECO_ESTAD0_CIDADE_CEP}    Miami Florida 47562000
 ${ENDERECO_PAIS}    United States
 ${ENDERECO_CELULAR}    54965580700
 

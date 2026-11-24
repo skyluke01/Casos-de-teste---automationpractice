@@ -226,3 +226,215 @@ o sistema deve exibir a mensagem de sucesso "Your order has been placed successf
     Run Keyword If    ${viu_mensagem}    Element Should Contain    ${ID_MENSAGEM_SUCESSO_CRIAR_PEDIDO}    ${MENSAGEM_SUCESSO_CRIAR_PEDIDO} 
 
 
+que estou cadastrado 
+    [Documentação]    Faz o E2E de cadastro
+
+    Go To    ${URL_PAGINA_INICIAL}
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_INICIAL}
+
+    #    Clica no botão de cadastro/login.
+    Wait Until Element Is Visible    ${BOTAO_MENU_CADASTRO}
+    Click Element    ${BOTAO_MENU_CADASTRO}
+
+    #    Verifica o redirecionamento para a página de cadastro/login e valida o formulário.
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_CADASTRO}
+
+    # Verifica se o título da página de cadastro está correto
+    ${TITULO_EM_TELA}=    Get Text    ${ID_NOME_PAGINA_CADASTRO}
+    Should Be Equal       ${TITULO_EM_TELA}    ${NOME_PAGINA_CADASTRO}
+
+    # Verifica se o título da aba do navegador está correto
+    ${TITULO_ABA}=    Get Title
+    Should Be Equal   ${TITULO_ABA}    ${TITULO_PAGINA_CADASTRO}
+
+    #    Verifica a página de cadastro/login e aguarda os campos de nome e email aparecerem.
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_CADASTRO}
+
+    #    Verifica se o título da página de cadastro está correto
+    ${TITULO_EM_TELA}=    Get Text    ${ID_NOME_PAGINA_CADASTRO}
+    Should Be Equal       ${TITULO_EM_TELA}    ${NOME_PAGINA_CADASTRO}
+
+    #    Verifica se o título da aba do navegador está correto
+    ${TITULO_ABA}=    Get Title
+    Should Be Equal   ${TITULO_ABA}    ${TITULO_PAGINA_CADASTRO}
+
+    #    Preenche os campos de nome e email com valores válidos.
+    [Arguments]    ${nome_cadastro}    ${email_cadastro}    ${senha}  ${dia_nascimento}  ${mes_nascimento}  ${ano_nascimento}    ${primeiro_nome}  ${ultimo_nome}  ${empresa}  ${endereco}  ${pais}  ${estado}  ${cidade}  ${cep}  ${celular}
+    Input Text    ${CAMPO_NOME_INICIAL}    ${nome_cadastro}    ${True}
+    Input Text    ${CAMPO_EMAIL_INICIAL}    ${email_cadastro}  ${True} 
+
+    #    Verifico se o nome e email foram inseridos corretamente
+    ${NOME_EM_TELA}=    Get Value    ${CAMPO_NOME_INICIAL }
+    Should Be Equal    ${NOME_EM_TELA}    ${nome_cadastro}
+
+    ${EMAIL_EM_TELA}=    Get Value    ${CAMPO_EMAIL_INICIAL}
+    Should Be Equal    ${EMAIL_EM_TELA}    ${email_cadastro}
+
+    #    Clica no botão de cadastro.
+    Click Button    ${BOTAO_CADASTRO}
+
+    #    Verifica o redirecionamento para o formulário completo de cadastro e valida o título.
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_FORMULARIO}
+
+    # Verifica se o título da página do formulário de cadastro está correto
+    ${TITULO_EM_TELA}=    Get Text    ${ID_NOME_PAGINA_FORMULARIO}
+    Should Be Equal       ${TITULO_EM_TELA}    ${NOME_PAGINA_FORMULARIO}
+
+    # Verifica se o título da aba do navegador está correto
+    ${TITULO_ABA}=    Get Title
+    Should Be Equal   ${TITULO_ABA}    ${TITULO_PAGINA_FORMULARIO}
+
+    #    Verifica a página do formulário completo de cadastro e aguarda os campos obrigatórios aparecerem.
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_FORMULARIO}
+
+    #    Verifica se o título da página do formulário de cadastro está correto
+    ${TITULO_EM_TELA}=    Get Text    ${ID_NOME_PAGINA_FORMULARIO}
+    Should Be Equal       ${TITULO_EM_TELA}    ${NOME_PAGINA_FORMULARIO}
+
+    #    Verifica se o título da aba do navegador está correto
+    ${TITULO_ABA}=    Get Title
+    Should Be Equal   ${TITULO_ABA}    ${TITULO_PAGINA_FORMULARIO}
+
+    #    Preenche os campos obrigatórios do formulário de cadastro.
+    Click Element    ${ID_MR_FORMULARIO}
+    Input Text    ${ID_SENHA_FORMULARIO}    ${senha}    ${True}
+    Select From List By Value    ${ID_DIA_NASCIMENTO}    ${dia_nascimento}
+    Select From List By Value    ${ID_MES_NASCIMENTO}    ${mes_nascimento}
+    Select From List By Value    ${ID_ANO_NASCIMENTO}    ${ano_nascimento}    
+
+    #    Verifica se a senha foi inserida corretamente
+    ${SENHA_EM_TELA}=    Get Value    ${ID_SENHA_FORMULARIO}
+    Should Be Equal    ${SENHA_EM_TELA}    ${senha}
+
+    #    Verifica se o dia de nascimento foi selecionado corretamente
+    ${DIA_EM_TELA}=    Get Value    ${ID_DIA_NASCIMENTO}
+    Should Be Equal    ${DIA_EM_TELA}    ${dia_nascimento}
+
+    #    Verifica se o mês de nascimento foi selecionado corretamente
+    ${MES_EM_TELA}=    Get Value    ${ID_MES_NASCIMENTO}
+    Should Be Equal    ${MES_EM_TELA}    ${mes_nascimento}
+
+    #    Verifica se o ano de nascimento foi selecionado corretamente
+    ${ANO_EM_TELA}=    Get Value    ${ID_ANO_NASCIMENTO}
+    Should Be Equal    ${ANO_EM_TELA}    ${ano_nascimento}
+
+    #    Verifica se o usuário consegue selecionar as opções de newsletter e ofertas especiais.
+    Click Element    ${ID_NEWSLETTER}
+    Click Element    ${ID_OFERTAS_ESPECIAIS}
+
+    #verifica se a opção de newsletter foi selecionada corretamente
+    ${NEWSLETTER_EM_TELA}=    Get Element Attribute    ${ID_NEWSLETTER}    checked
+    Should Be Equal    ${NEWSLETTER_EM_TELA}    true
+
+    #verifica se a opção de ofertas especiais foi selecionada corretamente
+    ${OFERTAS_EM_TELA}=    Get Element Attribute    ${ID_OFERTAS_ESPECIAIS}    checked
+    Should Be Equal    ${OFERTAS_EM_TELA}    true
+
+    #    Verifica se senha, dia, mês e ano de nascimento foram preenchidos corretamente
+    ${SENHA_EM_TELA}=    Get Value    ${ID_SENHA_FORMULARIO}
+    Should Be Equal    ${SENHA_EM_TELA}    ${SENHA_FORMULARIO_CADASTRO}
+
+    ${DIA_EM_TELA}=    Get Value    ${ID_DIA_NASCIMENTO}
+    Should Be Equal    ${DIA_EM_TELA}    ${DIA_NASCIMENTO_FORMULARIO}
+
+    ${MES_EM_TELA}=    Get Value    ${ID_MES_NASCIMENTO}
+    Should Be Equal    ${MES_EM_TELA}    ${MES_NASCIMENTO_FORMULARIO}
+
+    ${ANO_EM_TELA}=    Get Value    ${ID_ANO_NASCIMENTO}
+    Should Be Equal    ${ANO_EM_TELA}    ${ANO_NASCIMENTO_FORMULARIO}
+
+    #    Preenche os campos obrigatórios de endereço no formulário de cadastro.
+    Input Text    ${ID_PRIMEIRO_NOME}    ${primeiro_nome}    ${True}
+    Input Text    ${ID_ULTIMO_NOME}    ${ultimo_nome}    ${True}
+    Input Text    ${ID_EMPRESA}    ${empresa}    ${True}
+    Input Text    ${ID_ENDERECO}    ${endereco}    ${True}
+    Select From List By Value    ${ID_PAIS}    ${pais}
+    Input Text    ${ID_ESTADO}    ${estado}    ${True}
+    Input Text    ${ID_CIDADE}    ${cidade}    ${True}
+    Input Text    ${ID_CEP}    ${cep}   ${True}
+    Input Text    ${ID_CELULAR}   ${celular}   ${True}
+
+    #verifica se o primeiro nome foi inserido corretamente
+    ${PRIMEIRO_NOME_EM_TELA}=    Get Value    ${ID_PRIMEIRO_NOME}
+    Should Be Equal    ${PRIMEIRO_NOME_EM_TELA}    ${primeiro_nome}
+
+    #verifica se o último nome foi inserido corretamente
+    ${ULTIMO_NOME_EM_TELA}=    Get Value    ${ID_ULTIMO_NOME}
+    Should Be Equal    ${ULTIMO_NOME_EM_TELA}    ${ultimo_nome}
+
+    #verifica se a empresa foi inserida corretamente
+    ${EMPRESA_EM_TELA}=    Get Value    ${ID_EMPRESA}
+    Should Be Equal    ${EMPRESA_EM_TELA}    ${empresa}
+
+    #verifica se o endereço foi inserido corretamente
+    ${ENDERECO_EM_TELA}=    Get Value    ${ID_ENDERECO}
+    Should Be Equal    ${ENDERECO_EM_TELA}    ${endereco}
+
+    #verifica se o país foi selecionado corretamente
+    ${PAIS_EM_TELA}=    Get Value    ${ID_PAIS}
+    Should Be Equal    ${PAIS_EM_TELA}    ${pais}
+
+    #verifica se o estado foi inserido corretamente
+    ${ESTADO_EM_TELA}=    Get Value    ${ID_ESTADO}
+    Should Be Equal    ${ESTADO_EM_TELA}    ${estado}
+
+    #verifica se a cidade foi inserida corretamente
+    ${CIDADE_EM_TELA}=    Get Value    ${ID_CIDADE}
+    Should Be Equal    ${CIDADE_EM_TELA}    ${cidade}
+
+    #verifica se o CEP foi inserido corretamente
+    ${CEP_EM_TELA}=    Get Value    ${ID_CEP}
+    Should Be Equal    ${CEP_EM_TELA}    ${cep}
+
+    #verifica se o celular foi inserido corretamente
+    ${CELULAR_EM_TELA}=    Get Value    ${ID_CELULAR}
+    Should Be Equal    ${CELULAR_EM_TELA}    ${celular}
+
+
+    #    Clica no botão de criar conta.
+    Click Button    ${BOTAO_CRIAR_CONTA}
+
+    #    Verifica o redirecionamento para a página de conta criada e valida a mensagem de sucesso.
+    Wait Until Element Is Visible    ${ID_MENSAGEM_SUCESSO_CADASTRO}
+
+    #    Verifica se a mensagem de sucesso está correta
+    ${MENSAGEM_EM_TELA}=    Get Text    ${ID_MENSAGEM_SUCESSO_CADASTRO}
+    Should Be Equal       ${MENSAGEM_EM_TELA}    ${MENSAGEM_SUCESSO_CADASTRO}
+
+    #    Verifica se o título da aba do navegador está correto
+    ${TITULO_ABA}=    Get Title
+    Should Be Equal   ${TITULO_ABA}    ${TITULO_PAGINA_CONTA_CRIADA}
+
+    #    Verifica se a conta foi criada com sucesso e vê na tela a mensagem Account created.
+    Wait Until Element Is Visible   ${ID_MENSAGEM_SUCESSO_CADASTRO}
+
+    #    Clica no botão de continuar.
+    Click Element    ${BOTAO_CONTINUAR}
+
+    #    Verifica se o usuário está logado automaticamente e valida a mensagem de login.
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_INICIAL}
+
+    #    Verifica se o nome do usuário logado está correto
+    ${NOME_LOGADO_EM_TELA}=    Get Text    ${NOME_USUARIO_LOGADO}
+    Should Be Equal       ${NOME_LOGADO_EM_TELA}    ${MENSAGEM_USUARIO_LOGADO}
+
+    #    Verifica se o usuário está logado no sistema e vê "Logged in as [nome do usuário]".
+    Wait Until Element Is Visible    ${ID_NOME_PAGINA_INICIAL}
+
+    #verifica se o nome do usuário logado está correto
+    ${NOME_LOGADO_EM_TELA}=    Get Text    ${NOME_USUARIO_LOGADO}
+    Should Be Equal       ${NOME_LOGADO_EM_TELA}    ${MENSAGEM_USUARIO_LOGADO} 
+
+
+clico em "Delete Account"
+    [Documentação]    Clica no botão de excluir conta.
+    Click Element    ${BOTAO_EXCLUIR_CONTA}
+
+
+minha conta deve ser removida e devo visualizar "ACCOUNT DELETED!"
+    [Documentação]    Verifica o redirecionamento para a página de conta excluída e valida a mensagem de sucesso.
+    Wait Until Element Is Visible    ${ID_MENSAGEM_SUCESSO_EXCLUSAO}
+
+    #verifica se a mensagem de sucesso está correta
+    ${MENSAGEM_EM_TELA}=    Get Text    ${ID_MENSAGEM_SUCESSO_EXCLUSAO}
+    Should Be Equal       ${MENSAGEM_EM_TELA}    ${MENSAGEM_SUCESSO_EXCLUSAO}
