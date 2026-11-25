@@ -13,7 +13,7 @@ Recurso    ../cadastro/cadastro_realizado.variaveis.resource
 
 *** Keywords ***
 
-tenho produtos no carrinho
+que tenho produtos no carrinho
     [Documentação]    Adiciona Produtos ao carrinho após login
     #    Clica no botão Products
 
@@ -226,7 +226,7 @@ o sistema deve exibir a mensagem de sucesso "Your order has been placed successf
     Run Keyword If    ${viu_mensagem}    Element Should Contain    ${ID_MENSAGEM_SUCESSO_CRIAR_PEDIDO}    ${MENSAGEM_SUCESSO_CRIAR_PEDIDO} 
 
 
-que estou cadastrado 
+que me registro 
     [Documentação]    Faz o E2E de cadastro
 
     Go To    ${URL_PAGINA_INICIAL}
@@ -438,3 +438,21 @@ minha conta deve ser removida e devo visualizar "ACCOUNT DELETED!"
     #verifica se a mensagem de sucesso está correta
     ${MENSAGEM_EM_TELA}=    Get Text    ${ID_MENSAGEM_SUCESSO_EXCLUSAO}
     Should Be Equal       ${MENSAGEM_EM_TELA}    ${MENSAGEM_SUCESSO_EXCLUSAO}
+
+clico em "Proceed To Checkout"
+    [Documentação]    Clica no botão de ir para o checkout
+    Wait Until Element Is Visible    ${BOTAO_IR_PARA_CHECKOUT}
+
+    Click Element    ${BOTAO_IR_PARA_CHECKOUT}
+
+devo ver a opção de login/registro para concluir o pedido.
+    [Documentação]    Verifica se o modal de registro aparece e clicar no botão de registrar/logar
+    Wait Until Element Is Visible    ${BOTAO_MODAL_REGISTRO/LOGIN}
+
+    Click Element    ${BOTAO_MODAL_REGISTRO/LOGIN}
+
+retorno ao carrinho
+    [Documentação]    Volta para o carrinho após o registro
+    Wait Until Element Is Visible    ${BOTAO_MENU_SUPERIOR_CARRINHO}
+
+    Click Element    ${BOTAO_MENU_SUPERIOR_CARRINHO}

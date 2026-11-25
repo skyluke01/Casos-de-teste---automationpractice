@@ -73,6 +73,7 @@ ${MENSAGEM_SUCESSO_CRIAR_PEDIDO}    Your order has been placed successfully!
 ###################################################################################
 
 ${BOTAO_IR_PARA_CHECKOUT}    //a[normalize-space()='Proceed To Checkout']
+${BOTAO_MODAL_REGISTRO/LOGIN}    xpath://u[normalize-space()='Register / Login']
 
 ################################################################################### 
 # Elementos e valores página de pagamento finalizado
@@ -86,3 +87,9 @@ ${ID_MENSAGEM_PARABENS_PEDIDO_EFEITUADO}    xpath://p[normalize-space()='Congrat
 ${MENSAGEM_PARABENS_PEDIDO_EFEITUADO}    Congratulations! Your order has been confirmed!
 
 ${BOTAO_BAIXAR_FATURA}    xpath://a[normalize-space()='Download Invoice']
+
+################################################################################### 
+# Elementos e valores menu superior
+###################################################################################
+
+${BOTAO_MENU_SUPERIOR_CARRINHO}    //a[normalize-space()='Cart']
