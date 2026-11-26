@@ -1,1414 +1,522 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-25T14:18:26.427694" rpa="false" schemaversion="5">
+<robot generator="Robot 7.5.1 (Python 3.12.10 on win32)" generated="2026-11-26T11:06:01.242465" rpa="false" schemaversion="5">
 <suite id="s1" name="Casos de teste - automationpractice" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice">
 <suite id="s1-s1" name="Automação de testes" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes">
 <suite id="s1-s1-s1" name="Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests">
-<suite id="s1-s1-s1-s1" name="Checkout" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\checkout">
-<suite id="s1-s1-s1-s1-s1" name="Checkout.Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\checkout\checkout.tests.robot">
-<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
+<suite id="s1-s1-s1-s1" name="Produto" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\produto">
+<suite id="s1-s1-s1-s1-s1" name="Busca" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\produto\busca">
+<suite id="s1-s1-s1-s1-s1-s1" name="Busca Produto.Tests" source="C:\Users\LM\Documents\GitHub\Casos de teste - automationpractice\Automação de testes\tests\produto\busca\busca_produto.tests.robot">
+<kw name="Abrir navegador" owner="cadastro_realizado.keywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:18:26.858031" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<msg time="2026-11-26T11:06:01.661795" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
 <arg>${URL_PAGINA_INICIAL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-25T14:18:26.858031" elapsed="4.711903"/>
+<status status="PASS" start="2026-11-26T11:06:01.661795" elapsed="5.081227"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-25T14:18:31.569934" elapsed="0.033999"/>
+<status status="PASS" start="2026-11-26T11:06:06.743022" elapsed="0.018998"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-11-26T11:06:06.762020" elapsed="0.000000"/>
 </kw>
 <doc>Abre o navegador na página inicial.</doc>
-<status status="PASS" start="2026-11-25T14:18:26.857031" elapsed="4.746902"/>
+<status status="PASS" start="2026-11-26T11:06:01.660794" elapsed="5.101226"/>
 </kw>
-<test id="s1-s1-s1-s1-s1-t1" name="Checkout (Registro durante Checkout)" line="41">
-<kw name="Abrir navegador" owner="login_realizado.keywords" type="SETUP">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:18:31.607935" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<test id="s1-s1-s1-s1-s1-s1-t1" name="Acesso à Página de Produtos" line="13">
+<kw name="Dado que estou na página inicial do site" owner="cadastro_realizado.keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:06.768020" level="INFO">Opening url 'https://automationexercise.com'</msg>
 <arg>${URL_PAGINA_INICIAL}</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-25T14:18:31.607935" elapsed="10.049830"/>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-11-26T11:06:06.767022" elapsed="4.034040"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-25T14:18:41.657765" elapsed="0.019000"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_INICIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:10.801062" elapsed="1.014130"/>
 </kw>
-<doc>Abre o navegador na página inicial.</doc>
-<status status="PASS" start="2026-11-25T14:18:31.606936" elapsed="10.070832"/>
+<doc>Verifica se está na página inicial e se não estiver vai para ela</doc>
+<status status="PASS" start="2026-11-26T11:06:06.766074" elapsed="5.049118"/>
 </kw>
-<kw name="Dado que tenho produtos no carrinho" owner="checkout.keywords">
+<kw name="Quando clico no botão &quot;Products&quot;" owner="catalogo.keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:18:41.680764" level="INFO">Clicking element 'css:a[href="/products"]'.</msg>
+<msg time="2026-11-26T11:06:11.818217" level="INFO">Clicking element 'css:a[href="/products"]'.</msg>
 <arg>${BOTAO_PRODUTOS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:18:41.680764" elapsed="0.047000"/>
+<status status="PASS" start="2026-11-26T11:06:11.817217" elapsed="1.038926"/>
 </kw>
+<doc>Clica no botão Products</doc>
+<status status="PASS" start="2026-11-26T11:06:11.816217" elapsed="1.039926"/>
+</kw>
+<kw name="Então devo ser redirecionado para a página de todos os produtos &quot;ALL PRODUCTS&quot; e visualizar a listagem de produtos" owner="catalogo.keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ID_NOME_PAGINA_TODOS_PRODUTOS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:18:41.727764" elapsed="19.177284"/>
+<status status="PASS" start="2026-11-26T11:06:12.859146" elapsed="5.737143"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:00.913047" level="INFO">${TITULO_EM_TELA} = ALL PRODUCTS</msg>
+<msg time="2026-11-26T11:06:19.606551" level="INFO">${TITULO_EM_TELA} = ALL PRODUCTS</msg>
 <var>${TITULO_EM_TELA}</var>
 <arg>${ID_NOME_PAGINA_TODOS_PRODUTOS}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:00.905048" elapsed="0.007999"/>
+<status status="PASS" start="2026-11-26T11:06:18.596289" elapsed="1.010262"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${TITULO_EM_TELA}</arg>
 <arg>${NOME_PAGINA_TODOS_PRODUTOS}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:00.913047" elapsed="0.001000"/>
+<status status="PASS" start="2026-11-26T11:06:19.606551" elapsed="0.001037"/>
 </kw>
 <kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:00.916047" level="INFO">${TITULO_ABA} = Automation Exercise - All Products</msg>
+<msg time="2026-11-26T11:06:20.111579" level="INFO">${TITULO_ABA} = Automation Exercise - All Products</msg>
 <var>${TITULO_ABA}</var>
 <doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-25T14:19:00.914047" elapsed="0.003000"/>
+<status status="PASS" start="2026-11-26T11:06:19.607588" elapsed="0.503991"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${TITULO_ABA}</arg>
 <arg>${TITULO_PAGINA_TODOS_PRODUTOS}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:00.917047" elapsed="0.000000"/>
+<status status="PASS" start="2026-11-26T11:06:20.111579" elapsed="0.001036"/>
 </kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${DESCUBRA_MAIS}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-11-25T14:19:00.917047" elapsed="0.271001"/>
+<doc>Verificar se foi redirecionado corretamente para a página de todos os produtos</doc>
+<status status="PASS" start="2026-11-26T11:06:12.857146" elapsed="7.255469"/>
 </kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_ADICIONAR_PRIMEIRO_ITEM}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:01.188048" elapsed="0.007000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:01.196047" level="INFO">Clicking element 'css: a[data-product-id='1']'.</msg>
-<arg>${BOTAO_ADICIONAR_PRIMEIRO_ITEM}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:01.196047" elapsed="0.024000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_CONTINUAR_COMPRANDO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:01.220047" elapsed="1.040329"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:02.261376" level="INFO">Clicking element '//button[@class='btn btn-success close-modal btn-block']'.</msg>
-<arg>${BOTAO_CONTINUAR_COMPRANDO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:02.260376" elapsed="0.022999"/>
-</kw>
-<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_CONTINUAR_COMPRANDO}</arg>
-<arg>timeout=5s</arg>
-<doc>Waits until the element ``locator`` is not visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:02.283375" elapsed="0.007001"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_ADICIONAR_SEGUNDO_ITEM}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:02.290376" elapsed="0.006999"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:02.297375" level="INFO">Clicking element 'css: a[data-product-id='2']'.</msg>
-<arg>${BOTAO_ADICIONAR_SEGUNDO_ITEM}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:02.297375" elapsed="0.023000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_MODAL_VER_CARRINHO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:02.321374" elapsed="2.275142"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:04.597515" level="INFO">Clicking element '//u[normalize-space()='View Cart']'.</msg>
-<arg>${BOTAO_MODAL_VER_CARRINHO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:04.596516" elapsed="2.044656"/>
-</kw>
-<doc>Adiciona Produtos ao carrinho após login</doc>
-<status status="PASS" start="2026-11-25T14:18:41.677768" elapsed="24.964404"/>
-</kw>
-<kw name="Quando clico em &quot;Proceed To Checkout&quot;" owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_IR_PARA_CHECKOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:06.646171" elapsed="0.008997"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:06.656168" level="INFO">Clicking element '//a[normalize-space()='Proceed To Checkout']'.</msg>
-<arg>${BOTAO_IR_PARA_CHECKOUT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:06.656168" elapsed="0.036002"/>
-</kw>
-<doc>Clica no botão de ir para o checkout</doc>
-<status status="PASS" start="2026-11-25T14:19:06.644170" elapsed="0.048000"/>
-</kw>
-<kw name="Então devo ver a opção de login/registro para concluir o pedido." owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_MODAL_REGISTRO/LOGIN}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:06.695171" elapsed="0.009999"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:06.706170" level="INFO">Clicking element 'xpath://u[normalize-space()='Register / Login']'.</msg>
-<arg>${BOTAO_MODAL_REGISTRO/LOGIN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:06.705170" elapsed="6.971643"/>
-</kw>
-<doc>Verifica se o modal de registro aparece e clicar no botão de registrar/logar</doc>
-<status status="PASS" start="2026-11-25T14:19:06.694170" elapsed="6.982643"/>
-</kw>
-<kw name="E que me registro" owner="checkout.keywords">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:13.679814" level="INFO">Opening url 'https://automationexercise.com'</msg>
-<arg>${URL_PAGINA_INICIAL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-11-25T14:19:13.679814" elapsed="22.122595"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_INICIAL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:35.802409" elapsed="0.009002"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_MENU_CADASTRO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:35.811411" elapsed="0.005998"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:35.818410" level="INFO">Clicking element 'css:a[href="/login"]'.</msg>
-<arg>${BOTAO_MENU_CADASTRO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:35.817409" elapsed="3.458549"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_CADASTRO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.275958" elapsed="0.008001"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.290957" level="INFO">${TITULO_EM_TELA} = New User Signup!</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${ID_NOME_PAGINA_CADASTRO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.283959" elapsed="0.007998"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${NOME_PAGINA_CADASTRO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.291957" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.294957" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.292957" elapsed="0.002000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_PAGINA_CADASTRO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.294957" elapsed="0.001000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_CADASTRO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.295957" elapsed="0.006003"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.308958" level="INFO">${TITULO_EM_TELA} = New User Signup!</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${ID_NOME_PAGINA_CADASTRO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.301960" elapsed="0.006998"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${NOME_PAGINA_CADASTRO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.308958" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.311957" level="INFO">${TITULO_ABA} = Automation Exercise - Signup / Login</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.309957" elapsed="0.002000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_PAGINA_CADASTRO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.311957" elapsed="0.001000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.312957" level="INFO">Typing text 'John Teste' into text field 'css:input[data-qa="signup-name"]'.</msg>
-<arg>${CAMPO_NOME_INICIAL}</arg>
-<arg>${nome_cadastro}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.312957" elapsed="0.041053"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.355011" level="INFO">Typing text 'johnteste2@gmail.com' into text field 'css:input[data-qa="signup-email"]'.</msg>
-<arg>${CAMPO_EMAIL_INICIAL}</arg>
-<arg>${email_cadastro}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.355011" elapsed="0.036427"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.397437" level="INFO">${NOME_EM_TELA} = John Teste</msg>
-<var>${NOME_EM_TELA}</var>
-<arg>${CAMPO_NOME_INICIAL }</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.391438" elapsed="0.006999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_EM_TELA}</arg>
-<arg>${nome_cadastro}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.398437" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.428440" level="INFO">${EMAIL_EM_TELA} = johnteste2@gmail.com</msg>
-<var>${EMAIL_EM_TELA}</var>
-<arg>${CAMPO_EMAIL_INICIAL}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.398437" elapsed="0.030003"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${EMAIL_EM_TELA}</arg>
-<arg>${email_cadastro}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.429440" elapsed="0.000000"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:39.430442" level="INFO">Clicking button 'css:button[data-qa="signup-button"]'.</msg>
-<arg>${BOTAO_CADASTRO}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.429440" elapsed="0.045016"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_FORMULARIO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:39.475457" elapsed="3.646085"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.128545" level="INFO">${TITULO_EM_TELA} = ENTER ACCOUNT INFORMATION</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${ID_NOME_PAGINA_FORMULARIO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.121542" elapsed="0.007003"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${NOME_PAGINA_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.128545" elapsed="0.001000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.131545" level="INFO">${TITULO_ABA} = Automation Exercise - Signup</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.129545" elapsed="0.002000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_PAGINA_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.131545" elapsed="0.001000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_FORMULARIO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.132545" elapsed="0.006508"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.145053" level="INFO">${TITULO_EM_TELA} = ENTER ACCOUNT INFORMATION</msg>
-<var>${TITULO_EM_TELA}</var>
-<arg>${ID_NOME_PAGINA_FORMULARIO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.139053" elapsed="0.006000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${NOME_PAGINA_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.146053" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.148053" level="INFO">${TITULO_ABA} = Automation Exercise - Signup</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.146053" elapsed="0.002000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_PAGINA_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.149053" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.149053" level="INFO">Clicking element 'id_gender1'.</msg>
-<arg>${ID_MR_FORMULARIO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.149053" elapsed="0.029003"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.179054" level="INFO">Typing text 'SenhaForte123!' into text field 'password'.</msg>
-<arg>${ID_SENHA_FORMULARIO}</arg>
-<arg>${senha}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.178056" elapsed="0.034997"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.214053" level="INFO">Selecting options from selection list 'days' by value 10.</msg>
-<arg>${ID_DIA_NASCIMENTO}</arg>
-<arg>${dia_nascimento}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.213053" elapsed="0.058104"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.272156" level="INFO">Selecting options from selection list 'months' by value 10.</msg>
-<arg>${ID_MES_NASCIMENTO}</arg>
-<arg>${mes_nascimento}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.272156" elapsed="0.039999"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.313156" level="INFO">Selecting options from selection list 'years' by value 1988.</msg>
-<arg>${ID_ANO_NASCIMENTO}</arg>
-<arg>${ano_nascimento}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.312155" elapsed="0.034066"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.353223" level="INFO">${SENHA_EM_TELA} = SenhaForte123!</msg>
-<var>${SENHA_EM_TELA}</var>
-<arg>${ID_SENHA_FORMULARIO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.346221" elapsed="0.007002"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${SENHA_EM_TELA}</arg>
-<arg>${senha}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.354221" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.361221" level="INFO">${DIA_EM_TELA} = 10</msg>
-<var>${DIA_EM_TELA}</var>
-<arg>${ID_DIA_NASCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.354221" elapsed="0.007000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${DIA_EM_TELA}</arg>
-<arg>${dia_nascimento}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.362221" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.369223" level="INFO">${MES_EM_TELA} = 10</msg>
-<var>${MES_EM_TELA}</var>
-<arg>${ID_MES_NASCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.362221" elapsed="0.007002"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MES_EM_TELA}</arg>
-<arg>${mes_nascimento}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.370225" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.377223" level="INFO">${ANO_EM_TELA} = 1988</msg>
-<var>${ANO_EM_TELA}</var>
-<arg>${ID_ANO_NASCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.370225" elapsed="0.006998"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ANO_EM_TELA}</arg>
-<arg>${ano_nascimento}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.377223" elapsed="0.000000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.378222" level="INFO">Clicking element 'newsletter'.</msg>
-<arg>${ID_NEWSLETTER}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.378222" elapsed="0.026000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.404222" level="INFO">Clicking element 'optin'.</msg>
-<arg>${ID_OFERTAS_ESPECIAIS}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.404222" elapsed="0.026003"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.440476" level="INFO">${NEWSLETTER_EM_TELA} = true</msg>
-<var>${NEWSLETTER_EM_TELA}</var>
-<arg>${ID_NEWSLETTER}</arg>
-<arg>checked</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.431224" elapsed="0.009252"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NEWSLETTER_EM_TELA}</arg>
-<arg>true</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.440476" elapsed="0.000000"/>
-</kw>
-<kw name="Get Element Attribute" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.446477" level="INFO">${OFERTAS_EM_TELA} = true</msg>
-<var>${OFERTAS_EM_TELA}</var>
-<arg>${ID_OFERTAS_ESPECIAIS}</arg>
-<arg>checked</arg>
-<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.441474" elapsed="0.005003"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${OFERTAS_EM_TELA}</arg>
-<arg>true</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.446477" elapsed="0.000998"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.453476" level="INFO">${SENHA_EM_TELA} = SenhaForte123!</msg>
-<var>${SENHA_EM_TELA}</var>
-<arg>${ID_SENHA_FORMULARIO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.447475" elapsed="0.007001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${SENHA_EM_TELA}</arg>
-<arg>${SENHA_FORMULARIO_CADASTRO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.454476" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.460476" level="INFO">${DIA_EM_TELA} = 10</msg>
-<var>${DIA_EM_TELA}</var>
-<arg>${ID_DIA_NASCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.454476" elapsed="0.006000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${DIA_EM_TELA}</arg>
-<arg>${DIA_NASCIMENTO_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.460476" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.466476" level="INFO">${MES_EM_TELA} = 10</msg>
-<var>${MES_EM_TELA}</var>
-<arg>${ID_MES_NASCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.460476" elapsed="0.006000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MES_EM_TELA}</arg>
-<arg>${MES_NASCIMENTO_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.466476" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.473475" level="INFO">${ANO_EM_TELA} = 1988</msg>
-<var>${ANO_EM_TELA}</var>
-<arg>${ID_ANO_NASCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.466476" elapsed="0.006999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ANO_EM_TELA}</arg>
-<arg>${ANO_NASCIMENTO_FORMULARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.473475" elapsed="0.001001"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.474476" level="INFO">Typing text 'John' into text field 'first_name'.</msg>
-<arg>${ID_PRIMEIRO_NOME}</arg>
-<arg>${primeiro_nome}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.474476" elapsed="0.032998"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.507474" level="INFO">Typing text 'Teste' into text field 'last_name'.</msg>
-<arg>${ID_ULTIMO_NOME}</arg>
-<arg>${ultimo_nome}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.507474" elapsed="0.036508"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.543982" level="INFO">Typing text 'TesteCompany' into text field 'company'.</msg>
-<arg>${ID_EMPRESA}</arg>
-<arg>${empresa}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.543982" elapsed="0.050000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.593982" level="INFO">Typing text 'Rua do teste 1504' into text field 'address1'.</msg>
-<arg>${ID_ENDERECO}</arg>
-<arg>${endereco}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.593982" elapsed="0.039004"/>
-</kw>
-<kw name="Select From List By Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.633985" level="INFO">Selecting options from selection list 'country' by value United States.</msg>
-<arg>${ID_PAIS}</arg>
-<arg>${pais}</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.633985" elapsed="0.027506"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.662490" level="INFO">Typing text 'Florida' into text field 'state'.</msg>
-<arg>${ID_ESTADO}</arg>
-<arg>${estado}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.661491" elapsed="0.037000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.699490" level="INFO">Typing text 'Miami' into text field 'city'.</msg>
-<arg>${ID_CIDADE}</arg>
-<arg>${cidade}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.698491" elapsed="0.042036"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.741527" level="INFO">Typing text '47562000' into text field 'zipcode'.</msg>
-<arg>${ID_CEP}</arg>
-<arg>${cep}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.741527" elapsed="0.034999"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.776526" level="INFO">Typing text '54965580700' into text field 'mobile_number'.</msg>
-<arg>${ID_CELULAR}</arg>
-<arg>${celular}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.776526" elapsed="0.035999"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.821526" level="INFO">${PRIMEIRO_NOME_EM_TELA} = John</msg>
-<var>${PRIMEIRO_NOME_EM_TELA}</var>
-<arg>${ID_PRIMEIRO_NOME}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.813525" elapsed="0.009001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${PRIMEIRO_NOME_EM_TELA}</arg>
-<arg>${primeiro_nome}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.822526" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.828529" level="INFO">${ULTIMO_NOME_EM_TELA} = Teste</msg>
-<var>${ULTIMO_NOME_EM_TELA}</var>
-<arg>${ID_ULTIMO_NOME}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.822526" elapsed="0.006003"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ULTIMO_NOME_EM_TELA}</arg>
-<arg>${ultimo_nome}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.828529" elapsed="0.001000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.834528" level="INFO">${EMPRESA_EM_TELA} = TesteCompany</msg>
-<var>${EMPRESA_EM_TELA}</var>
-<arg>${ID_EMPRESA}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.829529" elapsed="0.004999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${EMPRESA_EM_TELA}</arg>
-<arg>${empresa}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.835528" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.841952" level="INFO">${ENDERECO_EM_TELA} = Rua do teste 1504</msg>
-<var>${ENDERECO_EM_TELA}</var>
-<arg>${ID_ENDERECO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.835528" elapsed="0.006424"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ENDERECO_EM_TELA}</arg>
-<arg>${endereco}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.841952" elapsed="0.000999"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.849952" level="INFO">${PAIS_EM_TELA} = United States</msg>
-<var>${PAIS_EM_TELA}</var>
-<arg>${ID_PAIS}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.842951" elapsed="0.007001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${PAIS_EM_TELA}</arg>
-<arg>${pais}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.849952" elapsed="0.001000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.857956" level="INFO">${ESTADO_EM_TELA} = Florida</msg>
-<var>${ESTADO_EM_TELA}</var>
-<arg>${ID_ESTADO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.850952" elapsed="0.007004"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ESTADO_EM_TELA}</arg>
-<arg>${estado}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.857956" elapsed="0.000999"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.863956" level="INFO">${CIDADE_EM_TELA} = Miami</msg>
-<var>${CIDADE_EM_TELA}</var>
-<arg>${ID_CIDADE}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.858955" elapsed="0.005001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${CIDADE_EM_TELA}</arg>
-<arg>${cidade}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.863956" elapsed="0.001000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.871002" level="INFO">${CEP_EM_TELA} = 47562000</msg>
-<var>${CEP_EM_TELA}</var>
-<arg>${ID_CEP}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.864956" elapsed="0.006046"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${CEP_EM_TELA}</arg>
-<arg>${cep}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.871002" elapsed="0.001000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.877038" level="INFO">${CELULAR_EM_TELA} = 54965580700</msg>
-<var>${CELULAR_EM_TELA}</var>
-<arg>${ID_CELULAR}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.872002" elapsed="0.005036"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${CELULAR_EM_TELA}</arg>
-<arg>${celular}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.877038" elapsed="0.001000"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:43.878038" level="INFO">Clicking button 'css:button[data-qa="create-account"]'.</msg>
-<arg>${BOTAO_CRIAR_CONTA}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:43.878038" elapsed="4.989285"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_MENSAGEM_SUCESSO_CADASTRO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.868328" elapsed="0.010172"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:48.888062" level="INFO">${MENSAGEM_EM_TELA} = ACCOUNT CREATED!</msg>
-<var>${MENSAGEM_EM_TELA}</var>
-<arg>${ID_MENSAGEM_SUCESSO_CADASTRO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.878500" elapsed="0.010560"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MENSAGEM_EM_TELA}</arg>
-<arg>${MENSAGEM_SUCESSO_CADASTRO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.889060" elapsed="0.000000"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:48.893060" level="INFO">${TITULO_ABA} = Automation Exercise - Account Created</msg>
-<var>${TITULO_ABA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.890060" elapsed="0.003000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_ABA}</arg>
-<arg>${TITULO_PAGINA_CONTA_CRIADA}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.893060" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_MENSAGEM_SUCESSO_CADASTRO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.894060" elapsed="0.006001"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:48.901059" level="INFO">Clicking element 'css:a[data-qa="continue-button"]'.</msg>
-<arg>${BOTAO_CONTINUAR}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.901059" elapsed="0.050001"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_INICIAL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:48.951060" elapsed="3.632260"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:52.597322" level="INFO">${NOME_LOGADO_EM_TELA} = Logged in as John Teste</msg>
-<var>${NOME_LOGADO_EM_TELA}</var>
-<arg>${NOME_USUARIO_LOGADO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:52.583320" elapsed="0.015000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_LOGADO_EM_TELA}</arg>
-<arg>${MENSAGEM_USUARIO_LOGADO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:52.598320" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_INICIAL}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:52.598320" elapsed="0.007002"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:52.612320" level="INFO">${NOME_LOGADO_EM_TELA} = Logged in as John Teste</msg>
-<var>${NOME_LOGADO_EM_TELA}</var>
-<arg>${NOME_USUARIO_LOGADO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:52.605322" elapsed="0.006998"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_LOGADO_EM_TELA}</arg>
-<arg>${MENSAGEM_USUARIO_LOGADO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:52.612320" elapsed="0.000999"/>
-</kw>
-<arg>${NOME_CADASTRO}</arg>
-<arg>${EMAIL_CADASTRO}</arg>
-<arg>${SENHA_FORMULARIO_CADASTRO}</arg>
-<arg>${DIA_NASCIMENTO_FORMULARIO}</arg>
-<arg>${MES_NASCIMENTO_FORMULARIO}</arg>
-<arg>${ANO_NASCIMENTO_FORMULARIO}</arg>
-<arg>${PRIMEIRO_NOME}</arg>
-<arg>${ULTIMO_NOME}</arg>
-<arg>${EMPRESA}</arg>
-<arg>${ENDERECO}</arg>
-<arg>${PAIS}</arg>
-<arg>${ESTADO}</arg>
-<arg>${CIDADE}</arg>
-<arg>${CEP}</arg>
-<arg>${CELULAR}</arg>
-<doc>Faz o E2E de cadastro</doc>
-<status status="PASS" start="2026-11-25T14:19:13.677814" elapsed="38.935505"/>
-</kw>
-<kw name="E retorno ao carrinho" owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_MENU_SUPERIOR_CARRINHO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:52.616319" elapsed="0.009003"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:52.626320" level="INFO">Clicking element '//a[normalize-space()='Cart']'.</msg>
-<arg>${BOTAO_MENU_SUPERIOR_CARRINHO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:52.625322" elapsed="1.782828"/>
-</kw>
-<doc>Volta para o carrinho após o registro</doc>
-<status status="PASS" start="2026-11-25T14:19:52.614319" elapsed="1.793831"/>
-</kw>
-<kw name="Quando clico em &quot;Proceed To Checkout&quot;" owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_IR_PARA_CHECKOUT}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:54.411150" elapsed="0.006000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:54.418150" level="INFO">Clicking element '//a[normalize-space()='Proceed To Checkout']'.</msg>
-<arg>${BOTAO_IR_PARA_CHECKOUT}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:54.417150" elapsed="1.457687"/>
-</kw>
-<doc>Clica no botão de ir para o checkout</doc>
-<status status="PASS" start="2026-11-25T14:19:54.409149" elapsed="1.466688"/>
-</kw>
-<kw name="E reviso o pedido" owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ENDERECO_ENTREGA_NOME}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.878836" elapsed="0.008001"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.893837" level="INFO">${NOME_ENTREGA_EM_TELA} = Mr. John Teste</msg>
-<var>${NOME_ENTREGA_EM_TELA}</var>
-<arg>${ENDERECO_ENTREGA_NOME}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.886837" elapsed="0.007000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_ENTREGA_EM_TELA}</arg>
-<arg>${ENDERECO_NOME}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.893837" elapsed="0.001000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.901838" level="INFO">${EMPRESA_ENTREGA_EM_TELA} = TesteCompany</msg>
-<var>${EMPRESA_ENTREGA_EM_TELA}</var>
-<arg>${ENDERECO_ENTREGA_EMPRESA}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.894837" elapsed="0.007001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${EMPRESA_ENTREGA_EM_TELA}</arg>
-<arg>${ENDERECO_EMPRESA}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.901838" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.909838" level="INFO">${RUA_ENTREGA_EM_TELA} = Rua do teste 1504</msg>
-<var>${RUA_ENTREGA_EM_TELA}</var>
-<arg>${ENDERECO_ENTREGA_RUA}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.901838" elapsed="0.008000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${RUA_ENTREGA_EM_TELA}</arg>
-<arg>${ENDERECO_RUA}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.909838" elapsed="0.001000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.917838" level="INFO">${ESTADO_CIDADE_CEP_ENTREGA_EM_TELA} = Miami Florida 47562000</msg>
-<var>${ESTADO_CIDADE_CEP_ENTREGA_EM_TELA}</var>
-<arg>${ENDERECO_ENTREGA_ESTADO_CIDADE_CEP}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.910838" elapsed="0.007000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ESTADO_CIDADE_CEP_ENTREGA_EM_TELA}</arg>
-<arg>${ENDERECO_ESTAD0_CIDADE_CEP}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.917838" elapsed="0.000999"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.925837" level="INFO">${PAIS_ENTREGA_EM_TELA} = United States</msg>
-<var>${PAIS_ENTREGA_EM_TELA}</var>
-<arg>${ENDERECO_ENTREGA_PAIS}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.918837" elapsed="0.007000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${PAIS_ENTREGA_EM_TELA}</arg>
-<arg>${ENDERECO_PAIS}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.925837" elapsed="0.001000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.933836" level="INFO">${CELULAR_ENTREGA_EM_TELA} = 54965580700</msg>
-<var>${CELULAR_ENTREGA_EM_TELA}</var>
-<arg>${ENDERECO_ENTREGA_CELULAR}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.926837" elapsed="0.006999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${CELULAR_ENTREGA_EM_TELA}</arg>
-<arg>${ENDERECO_CELULAR}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.933836" elapsed="0.001000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.941836" level="INFO">${NOME_COBRANCA_EM_TELA} = Mr. John Teste</msg>
-<var>${NOME_COBRANCA_EM_TELA}</var>
-<arg>${ENDERECO_COBRANCA_NOME}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.934836" elapsed="0.007000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_COBRANCA_EM_TELA}</arg>
-<arg>${ENDERECO_NOME}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.942836" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.949835" level="INFO">${EMPRESA_COBRANCA_EM_TELA} = TesteCompany</msg>
-<var>${EMPRESA_COBRANCA_EM_TELA}</var>
-<arg>${ENDERECO_COBRANCA_EMPRESA}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.942836" elapsed="0.006999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${EMPRESA_COBRANCA_EM_TELA}</arg>
-<arg>${ENDERECO_EMPRESA}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.950835" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.958835" level="INFO">${RUA_COBRANCA_EM_TELA} = Rua do teste 1504</msg>
-<var>${RUA_COBRANCA_EM_TELA}</var>
-<arg>${ENDERECO_COBRANCA_RUA}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.950835" elapsed="0.008000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${RUA_COBRANCA_EM_TELA}</arg>
-<arg>${ENDERECO_RUA}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.958835" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.966836" level="INFO">${ESTADO_CIDADE_CEP_COBRANCA_EM_TELA} = Miami Florida 47562000</msg>
-<var>${ESTADO_CIDADE_CEP_COBRANCA_EM_TELA}</var>
-<arg>${ENDERECO_COBRANCA_ESTADO_CIDADE_CEP}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.958835" elapsed="0.008001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ESTADO_CIDADE_CEP_COBRANCA_EM_TELA}</arg>
-<arg>${ENDERECO_ESTAD0_CIDADE_CEP}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.966836" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:55.975835" level="INFO">${PAIS_COBRANCA_EM_TELA} = United States</msg>
-<var>${PAIS_COBRANCA_EM_TELA}</var>
-<arg>${ENDERECO_COBRANCA_PAIS}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.966836" elapsed="0.008999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${PAIS_COBRANCA_EM_TELA}</arg>
-<arg>${ENDERECO_PAIS}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.975835" elapsed="0.001001"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.007837" level="INFO">${CELULAR_COBRANCA_EM_TELA} = 54965580700</msg>
-<var>${CELULAR_COBRANCA_EM_TELA}</var>
-<arg>${ENDERECO_COBRANCA_CELULAR}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.976836" elapsed="0.032000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${CELULAR_COBRANCA_EM_TELA}</arg>
-<arg>${ENDERECO_CELULAR}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.008836" elapsed="0.000000"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${BOTAO_FAZER_PEDIDO}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.008836" elapsed="0.277003"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.294837" level="INFO">${NOME_PRIMEIRO_ITEM_EM_TELA} = Blue Top</msg>
-<var>${NOME_PRIMEIRO_ITEM_EM_TELA}</var>
-<arg>${ID_CARRINHO_PRIMEIRO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.286837" elapsed="0.008000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${NOME_PRIMEIRO_ITEM_EM_TELA}</arg>
-<arg>${NOME_PRIMEIRO_ITEM}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.295837" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.304837" level="INFO">${PRECO_PRIMEIRO_ITEM_EM_TELA} = Rs. 500</msg>
-<var>${PRECO_PRIMEIRO_ITEM_EM_TELA}</var>
-<arg>${ID_PRECO_PRIMEIRO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.295837" elapsed="0.009000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${PRECO_PRIMEIRO_ITEM_EM_TELA}</arg>
-<arg>${PRECO_PRIMEIRO_ITEM}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.304837" elapsed="0.001000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.316838" level="INFO">${QUANTIDADE_PRIMEIRO_ITEM_EM_TELA} = 1</msg>
-<var>${QUANTIDADE_PRIMEIRO_ITEM_EM_TELA}</var>
-<arg>${ID_QUANTIDADE_PRIMEIRO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.305837" elapsed="0.011001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${QUANTIDADE_PRIMEIRO_ITEM_EM_TELA}</arg>
-<arg>${QUANTIDADE_PRIMEIRO_ITEM}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.317837" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.329837" level="INFO">${VALOR_TOTAL_PRIMEIRO_ITEM_EM_TELA} = Rs. 500</msg>
-<var>${VALOR_TOTAL_PRIMEIRO_ITEM_EM_TELA}</var>
-<arg>${ID_VALOR_TOTAL_PRIMEIRO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.317837" elapsed="0.012000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${VALOR_TOTAL_PRIMEIRO_ITEM_EM_TELA}</arg>
-<arg>${VALOR_TOTAL_PRIMEIRO_ITEM}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.329837" elapsed="0.001000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.340839" level="INFO">${NOME_SEGUNDO_ITEM_EM_TELA} = Men Tshirt</msg>
-<var>${NOME_SEGUNDO_ITEM_EM_TELA}</var>
-<arg>${ID_CARRINHO_SEGUNDO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.330837" elapsed="0.011000"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${NOME_SEGUNDO_ITEM_EM_TELA}</arg>
-<arg>${NOME_SEGUNDO_ITEM}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.341837" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.350836" level="INFO">${PRECO_SEGUNDO_ITEM_EM_TELA} = Rs. 400</msg>
-<var>${PRECO_SEGUNDO_ITEM_EM_TELA}</var>
-<arg>${ID_PRECO_SEGUNDO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.341837" elapsed="0.008999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${PRECO_SEGUNDO_ITEM_EM_TELA}</arg>
-<arg>${PRECO_SEGUNDO_ITEM}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.350836" elapsed="0.001001"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.359837" level="INFO">${QUANTIDADE_SEGUNDO_ITEM_EM_TELA} = 1</msg>
-<var>${QUANTIDADE_SEGUNDO_ITEM_EM_TELA}</var>
-<arg>${ID_QUANTIDADE_SEGUNDO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.351837" elapsed="0.008000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${QUANTIDADE_SEGUNDO_ITEM_EM_TELA}</arg>
-<arg>${QUANTIDADE_SEGUNDO_ITEM}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.359837" elapsed="0.000000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.368840" level="INFO">${VALOR_TOTAL_SEGUNDO_ITEM_EM_TELA} = Rs. 400</msg>
-<var>${VALOR_TOTAL_SEGUNDO_ITEM_EM_TELA}</var>
-<arg>${ID_VALOR_TOTAL_SEGUNDO_ITEM}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.360836" elapsed="0.008004"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${VALOR_TOTAL_SEGUNDO_ITEM_EM_TELA}</arg>
-<arg>${VALOR_TOTAL_SEGUNDO_ITEM}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.368840" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.369838" level="INFO">Typing text 'Entrega rápida, por favor.' into text field 'css:textarea[name='message']'.</msg>
-<arg>${ID_CHECKOUT_COMENTARIO}</arg>
-<arg>${checkout_comentario}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.369838" elapsed="0.035003"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.410836" level="INFO">${COMENTARIO_EM_TELA} = Entrega rápida, por favor.</msg>
-<var>${COMENTARIO_EM_TELA}</var>
-<arg>${ID_CHECKOUT_COMENTARIO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.404841" elapsed="0.005995"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${COMENTARIO_EM_TELA}</arg>
-<arg>${CHECKOUT_COMENTARIO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.410836" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_FAZER_PEDIDO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.411836" elapsed="0.005000"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:56.417835" level="INFO">Clicking element 'css:.btn.btn-default.check_out'.</msg>
-<arg>${BOTAO_FAZER_PEDIDO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:56.416836" elapsed="1.603298"/>
-</kw>
-<arg>${CHECKOUT_COMENTARIO}</arg>
-<doc>Fazer a revisão do pedido, endereço de entrega e de cobrança, e os produtos.</doc>
-<status status="PASS" start="2026-11-25T14:19:55.876837" elapsed="2.143297"/>
-</kw>
-<kw name="E insiro o pagamento" owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_NOME_PAGINA_PAGAMENTO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.024132" elapsed="0.008000"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.042134" level="INFO">${NOME_PAGINA_EM_TELA} = Payment</msg>
-<var>${NOME_PAGINA_EM_TELA}</var>
-<arg>${ID_NOME_PAGINA_PAGAMENTO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.032132" elapsed="0.010002"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${NOME_PAGINA_EM_TELA}</arg>
-<arg>${NOME_PAGINA_PAGAMENTO}</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.042134" elapsed="0.000999"/>
-</kw>
-<kw name="Get Title" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.046134" level="INFO">${TITULO_EM_TELA} = Automation Exercise - Payment</msg>
-<var>${TITULO_EM_TELA}</var>
-<doc>Returns the title of the current page.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.043133" elapsed="0.003001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${TITULO_EM_TELA}</arg>
-<arg>${TITULO_PAGINA_PAGAMENTO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.046134" elapsed="0.001000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.047134" level="INFO">Typing text 'John T.' into text field 'name_on_card'.</msg>
-<arg>${ID_NOME_CARTAO}</arg>
-<arg>${nome_cartao}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.047134" elapsed="0.034999"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.083132" level="INFO">Typing text '4242 4242 4242 4242' into text field 'card_number'.</msg>
-<arg>${ID_NUMERO_CARTAO}</arg>
-<arg>${numero_cartao}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.082133" elapsed="0.039001"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.122134" level="INFO">Typing text '123' into text field 'cvc'.</msg>
-<arg>${ID_CVC}</arg>
-<arg>${cvc}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.122134" elapsed="0.068999"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.192133" level="INFO">Typing text '12' into text field 'expiry_month'.</msg>
-<arg>${ID_MES_VENCIMENTO}</arg>
-<arg>${mes_vencimento}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.191133" elapsed="0.042999"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.235132" level="INFO">Typing text '2028' into text field 'expiry_year'.</msg>
-<arg>${ID_ANO_VENCIMENTO}</arg>
-<arg>${ano_vencimento}</arg>
-<arg>${True}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.234132" elapsed="0.038002"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.279134" level="INFO">${NOME_CARTAO_EM_TELA} = John T.</msg>
-<var>${NOME_CARTAO_EM_TELA}</var>
-<arg>${ID_NOME_CARTAO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.272134" elapsed="0.007000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NOME_CARTAO_EM_TELA}</arg>
-<arg>${NOME_CARTAO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.279134" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.285133" level="INFO">${NUMERO_CARTAO_EM_TELA} = 4242 4242 4242 4242</msg>
-<var>${NUMERO_CARTAO_EM_TELA}</var>
-<arg>${ID_NUMERO_CARTAO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.280133" elapsed="0.005000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${NUMERO_CARTAO_EM_TELA}</arg>
-<arg>${NUMERO_CARTAO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.285133" elapsed="0.001002"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.293134" level="INFO">${CVC_EM_TELA} = 123</msg>
-<var>${CVC_EM_TELA}</var>
-<arg>${ID_CVC}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.286135" elapsed="0.006999"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${CVC_EM_TELA}</arg>
-<arg>${CVC}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.293134" elapsed="0.000999"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.299134" level="INFO">${MES_CARTAO_EM_TELA} = 12</msg>
-<var>${MES_CARTAO_EM_TELA}</var>
-<arg>${ID_MES_VENCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.294133" elapsed="0.005001"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MES_CARTAO_EM_TELA}</arg>
-<arg>${MES_VENCIMENTO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.300134" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.307134" level="INFO">${ANO_CARTAO_EM_TELA} = 2028</msg>
-<var>${ANO_CARTAO_EM_TELA}</var>
-<arg>${ID_ANO_VENCIMENTO}</arg>
-<doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.300134" elapsed="0.007000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${ANO_CARTAO_EM_TELA}</arg>
-<arg>${ANO_VENCIMENTO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.307134" elapsed="0.000999"/>
-</kw>
-<arg>${NOME_CARTAO}</arg>
-<arg>${NUMERO_CARTAO}</arg>
-<arg>${CVC}</arg>
-<arg>${MES_VENCIMENTO}</arg>
-<arg>${ANO_VENCIMENTO}</arg>
-<doc>Verifica se está na página de pagamento e insere os dados de pagamento</doc>
-<status status="PASS" start="2026-11-25T14:19:58.022134" elapsed="0.285999"/>
-</kw>
-<kw name="E confirmo" owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BOTAO_PAGAR_E_CONFIRMAR_PEDIDO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.310133" elapsed="0.007001"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:19:58.318133" level="INFO">Clicking element 'xpath://button[@id='submit']'.</msg>
-<arg>${BOTAO_PAGAR_E_CONFIRMAR_PEDIDO}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.318133" elapsed="0.034001"/>
-</kw>
-<doc>Clica no botão de confirmar pagamento</doc>
-<status status="PASS" start="2026-11-25T14:19:58.309133" elapsed="0.043001"/>
-</kw>
-<kw name="Então o sistema deve exibir a mensagem de sucesso &quot;Your order has been placed successfully!&quot;" owner="checkout.keywords">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:20:01.453684" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-94.png"&gt;&lt;img src="selenium-screenshot-94.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2026-11-25T14:20:01.454683" level="FAIL">Element 'css:#success_message' not visible after 500 milliseconds.</msg>
-<arg>${ID_MENSAGEM_SUCESSO_CRIAR_PEDIDO}</arg>
-<arg>timeout=0.5s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2026-11-25T14:19:58.356134" elapsed="3.101549">Element 'css:#success_message' not visible after 500 milliseconds.</status>
-</kw>
-<msg time="2026-11-25T14:20:01.457683" level="INFO">${viu_mensagem} = False</msg>
-<var>${viu_mensagem}</var>
-<arg>Wait Until Element Is Visible</arg>
-<arg>${ID_MENSAGEM_SUCESSO_CRIAR_PEDIDO}</arg>
-<arg>timeout=0.5s</arg>
-<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2026-11-25T14:19:58.355134" elapsed="3.103549"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${viu_mensagem}</arg>
-<arg>Element Should Contain</arg>
-<arg>${ID_MENSAGEM_SUCESSO_CRIAR_PEDIDO}</arg>
-<arg>${MENSAGEM_SUCESSO_CRIAR_PEDIDO}</arg>
-<doc>Runs the given keyword with the given arguments, if `condition` is true.</doc>
-<status status="PASS" start="2026-11-25T14:20:01.458683" elapsed="0.000000"/>
-</kw>
-<doc>Verificar a mensagem de sucesso ao confirmar a compra</doc>
-<status status="PASS" start="2026-11-25T14:19:58.354134" elapsed="3.104549"/>
-</kw>
-<kw name="E clico em &quot;Delete Account&quot;" owner="checkout.keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:20:01.461683" level="INFO">Clicking element 'css:a[href="/delete_account"]'.</msg>
-<arg>${BOTAO_EXCLUIR_CONTA}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:20:01.461683" elapsed="1.693521"/>
-</kw>
-<doc>Clica no botão de excluir conta.</doc>
-<status status="PASS" start="2026-11-25T14:20:01.459683" elapsed="1.695521"/>
-</kw>
-<kw name="E minha conta deve ser removida e devo visualizar &quot;ACCOUNT DELETED!&quot;" owner="checkout.keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ID_MENSAGEM_SUCESSO_EXCLUSAO}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-11-25T14:20:03.157204" elapsed="0.007001"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-11-25T14:20:03.172204" level="INFO">${MENSAGEM_EM_TELA} = ACCOUNT DELETED!</msg>
-<var>${MENSAGEM_EM_TELA}</var>
-<arg>${ID_MENSAGEM_SUCESSO_EXCLUSAO}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-25T14:20:03.164205" elapsed="0.009000"/>
-</kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${MENSAGEM_EM_TELA}</arg>
-<arg>${MENSAGEM_SUCESSO_EXCLUSAO}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-11-25T14:20:03.173205" elapsed="0.000000"/>
-</kw>
-<doc>Verifica o redirecionamento para a página de conta excluída e valida a mensagem de sucesso.</doc>
-<status status="PASS" start="2026-11-25T14:20:03.156204" elapsed="0.018002"/>
-</kw>
-<status status="PASS" start="2026-11-25T14:18:31.603933" elapsed="91.570273"/>
+<status status="PASS" start="2026-11-26T11:06:06.762020" elapsed="13.351596"/>
 </test>
-<kw name="Fechar navegador" owner="login_realizado.keywords" type="TEARDOWN">
+<test id="s1-s1-s1-s1-s1-s1-t2" name="Procurar Produto" line="19">
+<kw name="Dado que estou na página de produtos" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_TODOS_PRODUTOS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:20.120615" elapsed="1.009509"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:22.139595" level="INFO">${TITULO_EM_TELA} = ALL PRODUCTS</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_TODOS_PRODUTOS}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:21.130124" elapsed="1.009471"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_TODOS_PRODUTOS}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:06:22.139595" elapsed="0.001004"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:22.643763" level="INFO">${TITULO_ABA} = Automation Exercise - All Products</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-26T11:06:22.140599" elapsed="0.503164"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_TODOS_PRODUTOS}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:06:22.644266" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se está na página de todos os produtos</doc>
+<status status="PASS" start="2026-11-26T11:06:20.119616" elapsed="2.524650"/>
+</kw>
+<kw name="Quando digito o nome do produto em &quot;Search Product&quot;" owner="busca_produto.keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:22.647270" level="INFO">Clicking element 'search_product'.</msg>
+<arg>${ID_BUSCA_PRODUTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:22.647270" elapsed="1.031220"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:23.678490" level="INFO">Typing text 'Top' into text field 'search_product'.</msg>
+<arg>${ID_BUSCA_PRODUTO}</arg>
+<arg>${produto}</arg>
+<arg>${True}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:23.678490" elapsed="1.530829"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:26.218042" level="INFO">${NOME_EM_TELA} = Top</msg>
+<var>${NOME_EM_TELA}</var>
+<arg>${ID_BUSCA_PRODUTO}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:25.209319" elapsed="1.008723"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${NOME_EM_TELA}</arg>
+<arg>${produto}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-11-26T11:06:26.218042" elapsed="0.001052"/>
+</kw>
+<arg>${PRODUTO}</arg>
+<doc>Digita o nome do produto no campo de busca</doc>
+<status status="PASS" start="2026-11-26T11:06:22.646270" elapsed="3.572824"/>
+</kw>
+<kw name="E clico para pesquisar" owner="busca_produto.keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:26.221094" level="INFO">Clicking element 'submit_search'.</msg>
+<arg>${BOTÃO_BUSCA_PRODUTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:26.221094" elapsed="5.103565"/>
+</kw>
+<doc>Clica no botão de buscar produto</doc>
+<status status="PASS" start="2026-11-26T11:06:26.220094" elapsed="5.104565"/>
+</kw>
+<kw name="Então devo conseguir visualizar o título &quot;SEARCHED PRODUCTS&quot; e todos os produtos correspondentes aquele nome" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_BUSCA_PRODUTO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:31.326686" elapsed="1.012155"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:33.347545" level="INFO">${TITULO_EM_TELA} = SEARCHED PRODUCTS</msg>
+<var>${TITULO_EM_TELA}</var>
+<arg>${ID_NOME_PAGINA_BUSCA_PRODUTO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:32.338841" elapsed="1.008704"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${NOME_PAGINA_BUSCA_PRODUTO}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:06:33.347545" elapsed="0.001003"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:33.851927" level="INFO">${TITULO_ABA} = Automation Exercise - All Products</msg>
+<var>${TITULO_ABA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-26T11:06:33.348548" elapsed="0.503379"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_ABA}</arg>
+<arg>${TITULO_PAGINA_BUSCA_PRODUTO}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:06:33.851927" elapsed="0.001008"/>
+</kw>
+<doc>Verificar se foi redirecionado para a página de produtos certa</doc>
+<status status="PASS" start="2026-11-26T11:06:31.325686" elapsed="2.527249"/>
+</kw>
+<kw name="Fechar navegador" owner="cadastro_realizado.keywords" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-25T14:20:03.178204" elapsed="2.236845"/>
+<status status="PASS" start="2026-11-26T11:06:33.853932" elapsed="2.594513"/>
 </kw>
 <doc>Fecha o navegador.</doc>
-<status status="PASS" start="2026-11-25T14:20:03.177204" elapsed="2.237845"/>
+<status status="PASS" start="2026-11-26T11:06:33.853932" elapsed="2.594513"/>
 </kw>
-<status status="PASS" start="2026-11-25T14:18:26.463691" elapsed="98.951358"/>
+<status status="PASS" start="2026-11-26T11:06:20.115614" elapsed="16.333832"/>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t3" name="Redirecionamento a página de categorias" line="28">
+<kw name="Abrir navegador" owner="cadastro_realizado.keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:36.454445" level="INFO">Opening browser 'chrome' to base url 'https://automationexercise.com'.</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-26T11:06:36.454445" elapsed="5.217081"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-26T11:06:41.671526" elapsed="0.516340"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2026-11-26T11:06:42.187866" elapsed="0.000503"/>
+</kw>
+<doc>Abre o navegador na página inicial.</doc>
+<status status="PASS" start="2026-11-26T11:06:36.453444" elapsed="5.734925"/>
+</kw>
+<kw name="Dado que estou na página inicial do site" owner="cadastro_realizado.keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:42.189373" level="INFO">Opening url 'https://automationexercise.com'</msg>
+<arg>${URL_PAGINA_INICIAL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-11-26T11:06:42.189373" elapsed="4.136592"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_NOME_PAGINA_INICIAL}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:46.325965" elapsed="1.013284"/>
+</kw>
+<doc>Verifica se está na página inicial e se não estiver vai para ela</doc>
+<status status="PASS" start="2026-11-26T11:06:42.188369" elapsed="5.150880"/>
+</kw>
+<kw name="Quando localizo e clico em uma categoria" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_CATEGORIA_MULHER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:47.341252" elapsed="1.010285"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:48.351537" level="INFO">Clicking element 'xpath://a[normalize-space()='Women']'.</msg>
+<arg>${BOTAO_CATEGORIA_MULHER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:48.351537" elapsed="1.036974"/>
+</kw>
+<doc>Ver se as categorias estão visiveis no menu lateral e clicar na categoria</doc>
+<status status="PASS" start="2026-11-26T11:06:47.340252" elapsed="2.048259"/>
+</kw>
+<kw name="E sua subcategoria na barra lateral esquerda" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_SUBCATEGORIA_VESTIDO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:49.390017" elapsed="2.217424"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:51.607441" level="INFO">Clicking element 'css:a[href='/category_products/1']'.</msg>
+<arg>${BOTAO_SUBCATEGORIA_VESTIDO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:51.607441" elapsed="3.115510"/>
+</kw>
+<doc>Clica no botão de subcategoria</doc>
+<status status="PASS" start="2026-11-26T11:06:49.389014" elapsed="5.333937"/>
+</kw>
+<kw name="Então devo ser redirecionado para a página da categoria" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_PAGINA_CATEGORIA_VESTIDO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:54.724021" elapsed="1.012135"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:56.240389" level="INFO">${TITULO_EM_TELA} = Automation Exercise - Dress Products</msg>
+<var>${TITULO_EM_TELA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-26T11:06:55.736156" elapsed="0.504233"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${TITULO_PAGINA_CATEGORIA_VESTIDO}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:06:56.240389" elapsed="0.001004"/>
+</kw>
+<doc>Verificar se foi redirecionado corretamente para a página da categoria</doc>
+<status status="PASS" start="2026-11-26T11:06:54.722951" elapsed="1.518442"/>
+</kw>
+<kw name="E visualizar os produtos filtrados junto com o título correspondente" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_SEGUNDO_PRODUTO_CATEGORIA_VESTIDO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:56.243394" elapsed="1.009035"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:06:58.262597" level="INFO">${SEGUNDO_PRODUTO_EM_TELA} = Stylish Dress</msg>
+<var>${SEGUNDO_PRODUTO_EM_TELA}</var>
+<arg>${ID_SEGUNDO_PRODUTO_CATEGORIA_VESTIDO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:57.252429" elapsed="1.010168"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SEGUNDO_PRODUTO_EM_TELA}</arg>
+<arg>${NOME_SEGUNDO_PRODUTO_CATEGORIA_VESTIDO}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:06:58.262597" elapsed="0.000734"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_TERCEIRO_PRODUTO_CATEGORIA_VESTIDO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:06:58.263862" elapsed="1.009125"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:00.281603" level="INFO">${TERCEIRO_PRODUTO_EM_TELA} = Rose Pink Embroidered Maxi Dress</msg>
+<var>${TERCEIRO_PRODUTO_EM_TELA}</var>
+<arg>${ID_TERCEIRO_PRODUTO_CATEGORIA_VESTIDO}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:06:59.272987" elapsed="1.008616"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TERCEIRO_PRODUTO_EM_TELA}</arg>
+<arg>${NOME_TERCEIRO_PRODUTO_CATEGORIA_VESTIDO}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:07:00.281603" elapsed="0.001448"/>
+</kw>
+<doc>Ver se os produtos filtrados correspondem com a categoria</doc>
+<status status="PASS" start="2026-11-26T11:06:56.242393" elapsed="4.040658"/>
+</kw>
+<status status="PASS" start="2026-11-26T11:06:36.451444" elapsed="23.832608"/>
+</test>
+<test id="s1-s1-s1-s1-s1-s1-t4" name="Redirecionamento de uma página de categoria para a outra" line="37">
+<kw name="Dado que estou em uma página de categoria" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_PAGINA_CATEGORIA_VESTIDO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:07:00.289052" elapsed="1.008283"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:01.800962" level="INFO">${TITULO_EM_TELA} = Automation Exercise - Dress Products</msg>
+<var>${TITULO_EM_TELA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-26T11:07:01.297335" elapsed="0.504140"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${TITULO_PAGINA_CATEGORIA_VESTIDO}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:07:01.801475" elapsed="0.000000"/>
+</kw>
+<doc>Verifica se está em uma página de categoria</doc>
+<status status="PASS" start="2026-11-26T11:07:00.288051" elapsed="1.513424"/>
+</kw>
+<kw name="Quando localizo e clico em outra categoria" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_CATEGORIA_MULHER}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:07:01.803527" elapsed="1.008650"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:02.812177" level="INFO">Clicking element 'xpath://a[normalize-space()='Women']'.</msg>
+<arg>${BOTAO_CATEGORIA_MULHER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:07:02.812177" elapsed="1.025791"/>
+</kw>
+<doc>Localiza no menu lateral e clica na categoria</doc>
+<status status="PASS" start="2026-11-26T11:07:01.802479" elapsed="2.035489"/>
+</kw>
+<kw name="E sua subcategoria" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BOTAO_SUBCATEGORIA_TOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:07:03.840475" elapsed="1.008841"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:04.849316" level="INFO">Clicking element 'css:a[href='/category_products/2']'.</msg>
+<arg>${BOTAO_SUBCATEGORIA_TOP}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:07:04.849316" elapsed="4.200098"/>
+</kw>
+<doc>Clica no botão de subcategoria</doc>
+<status status="PASS" start="2026-11-26T11:07:03.838471" elapsed="5.210943"/>
+</kw>
+<kw name="Então devo ser redirecionado para a nova página de categoria selecionada" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_PAGINA_CATEGORIA_TOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:07:09.051418" elapsed="1.012110"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:11.072542" level="INFO">${NOME_EM_TELA} = WOMEN - TOPS PRODUCTS</msg>
+<var>${NOME_EM_TELA}</var>
+<arg>${ID_PAGINA_CATEGORIA_TOP}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:07:10.063528" elapsed="1.009517"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${NOME_EM_TELA}</arg>
+<arg>${NOME_PAGINA_CATEGORIA_TOP}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-11-26T11:07:11.073045" elapsed="0.000000"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:11.576827" level="INFO">${TITULO_EM_TELA} = Automation Exercise - Tops Products</msg>
+<var>${TITULO_EM_TELA}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-11-26T11:07:11.073045" elapsed="0.504286"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TITULO_EM_TELA}</arg>
+<arg>${TITULO_PAGINA_CATEGORIA_TOP}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:07:11.577331" elapsed="0.000000"/>
+</kw>
+<doc>Verificar se foi redirecionado corretamente para a página da categoria</doc>
+<status status="PASS" start="2026-11-26T11:07:09.050419" elapsed="2.526912"/>
+</kw>
+<kw name="E ver seus respectivos produtos filtrados" owner="busca_produto.keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_PRIMEIRO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:07:11.581334" elapsed="1.009756"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:13.599921" level="INFO">${PRIMEIRO_PRODUTO_EM_TELA} = Blue Top</msg>
+<var>${PRIMEIRO_PRODUTO_EM_TELA}</var>
+<arg>${ID_PRIMEIRO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:07:12.591090" elapsed="1.008831"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${PRIMEIRO_PRODUTO_EM_TELA}</arg>
+<arg>${NOME_PRIMEIRO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:07:13.599921" elapsed="0.001028"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_SEGUNDO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:07:13.600949" elapsed="1.009060"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:15.618794" level="INFO">${SEGUNDO_PRODUTO_EM_TELA} = Winter Top</msg>
+<var>${SEGUNDO_PRODUTO_EM_TELA}</var>
+<arg>${ID_SEGUNDO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:07:14.610009" elapsed="1.009288"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SEGUNDO_PRODUTO_EM_TELA}</arg>
+<arg>${NOME_SEGUNDO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:07:15.619297" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ID_TERCEIRO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T11:07:15.619297" elapsed="1.009873"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-11-26T11:07:17.637877" level="INFO">${TERCEIRO_PRODUTO_EM_TELA} = Summer White Top</msg>
+<var>${TERCEIRO_PRODUTO_EM_TELA}</var>
+<arg>${ID_TERCEIRO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T11:07:16.629170" elapsed="1.008707"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TERCEIRO_PRODUTO_EM_TELA}</arg>
+<arg>${NOME_TERCEIRO_PRODUTO_CATEGORIA_TOP}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-11-26T11:07:17.637877" elapsed="0.001005"/>
+</kw>
+<doc>Ver se os produtos filtrados correspondem com a categoria</doc>
+<status status="PASS" start="2026-11-26T11:07:11.580333" elapsed="6.058549"/>
+</kw>
+<status status="PASS" start="2026-11-26T11:07:00.286051" elapsed="17.353830"/>
+</test>
+<kw name="Fechar navegador" owner="cadastro_realizado.keywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-26T11:07:17.641881" elapsed="2.556129"/>
+</kw>
+<doc>Fecha o navegador.</doc>
+<status status="PASS" start="2026-11-26T11:07:17.641881" elapsed="2.556129"/>
+</kw>
+<status status="PASS" start="2026-11-26T11:06:01.279980" elapsed="78.918030"/>
 </suite>
-<status status="PASS" start="2026-11-25T14:18:26.461689" elapsed="98.957360"/>
+<status status="PASS" start="2026-11-26T11:06:01.277981" elapsed="78.923030"/>
 </suite>
-<status status="PASS" start="2026-11-25T14:18:26.459691" elapsed="98.961358"/>
+<status status="PASS" start="2026-11-26T11:06:01.274981" elapsed="78.928030"/>
 </suite>
-<status status="PASS" start="2026-11-25T14:18:26.456690" elapsed="98.967359"/>
+<status status="PASS" start="2026-11-26T11:06:01.272980" elapsed="78.932030"/>
 </suite>
-<status status="PASS" start="2026-11-25T14:18:26.435692" elapsed="98.996357"/>
+<status status="PASS" start="2026-11-26T11:06:01.269980" elapsed="78.936031"/>
+</suite>
+<status status="PASS" start="2026-11-26T11:06:01.250983" elapsed="78.961032"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Casos de teste - automationpractice" id="s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice</stat>
-<stat name="Automação de testes" id="s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes</stat>
-<stat name="Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests</stat>
-<stat name="Checkout" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Checkout</stat>
-<stat name="Checkout.Tests" id="s1-s1-s1-s1-s1" pass="1" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Checkout.Checkout.Tests</stat>
+<stat name="Casos de teste - automationpractice" id="s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice</stat>
+<stat name="Automação de testes" id="s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes</stat>
+<stat name="Tests" id="s1-s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests</stat>
+<stat name="Produto" id="s1-s1-s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Produto</stat>
+<stat name="Busca" id="s1-s1-s1-s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Produto.Busca</stat>
+<stat name="Busca Produto.Tests" id="s1-s1-s1-s1-s1-s1" pass="4" fail="0" skip="0">Casos de teste - automationpractice.Automação de testes.Tests.Produto.Busca.Busca Produto.Tests</stat>
 </suite>
 </statistics>
 <errors>

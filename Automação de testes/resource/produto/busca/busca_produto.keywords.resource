@@ -50,3 +50,92 @@ devo conseguir visualizar o título "SEARCHED PRODUCTS" e todos os produtos corr
     ${TITULO_ABA}=   Get Title
     Should Be Equal    ${TITULO_ABA}    ${TITULO_PAGINA_BUSCA_PRODUTO}
 
+localizo e clico em uma categoria
+    [Documentação]    Ver se as categorias estão visiveis no menu lateral e clicar na categoria
+    Wait Until Element Is Visible    ${BOTAO_CATEGORIA_MULHER}
+    Click Element    ${BOTAO_CATEGORIA_MULHER}
+
+E sua subcategoria na barra lateral esquerda
+    [Documentação]    Clica no botão de subcategoria
+    Wait Until Element Is Visible    ${BOTAO_SUBCATEGORIA_VESTIDO}
+    Click Element    ${BOTAO_SUBCATEGORIA_VESTIDO}
+
+devo ser redirecionado para a página da categoria 
+    [Documentação]    Verificar se foi redirecionado corretamente para a página da categoria
+    Wait Until Element Is Visible    ${ID_PAGINA_CATEGORIA_VESTIDO}
+
+    #Verificar se o título da aba está correto
+    ${TITULO_EM_TELA}    Get Title
+    Should Be Equal    ${TITULO_EM_TELA}    ${TITULO_PAGINA_CATEGORIA_VESTIDO}
+
+visualizar os produtos filtrados junto com o título correspondente
+    [Documentação]    Ver se os produtos filtrados correspondem com a categoria  
+
+    #Segundo produto
+    Wait Until Element Is Visible    ${ID_SEGUNDO_PRODUTO_CATEGORIA_VESTIDO}
+
+    #Verificar se o segundo produto corresponde a categoria correta
+    ${SEGUNDO_PRODUTO_EM_TELA}    Get Text    ${ID_SEGUNDO_PRODUTO_CATEGORIA_VESTIDO}
+    Should Be Equal    ${SEGUNDO_PRODUTO_EM_TELA}    ${NOME_SEGUNDO_PRODUTO_CATEGORIA_VESTIDO}
+
+    #Terceiro produto
+    Wait Until Element Is Visible    ${ID_TERCEIRO_PRODUTO_CATEGORIA_VESTIDO}
+
+    #Verificar se o segundo produto corresponde a categoria correta
+    ${TERCEIRO_PRODUTO_EM_TELA}    Get Text    ${ID_TERCEIRO_PRODUTO_CATEGORIA_VESTIDO}
+    Should Be Equal    ${TERCEIRO_PRODUTO_EM_TELA}    ${NOME_TERCEIRO_PRODUTO_CATEGORIA_VESTIDO}
+
+
+que estou em uma página de categoria
+    [Documentação]    Verifica se está em uma página de categoria
+    Wait Until Element Is Visible    ${ID_PAGINA_CATEGORIA_VESTIDO}
+
+    #Verificar se o título da aba está correto
+    ${TITULO_EM_TELA}    Get Title
+    Should Be Equal    ${TITULO_EM_TELA}    ${TITULO_PAGINA_CATEGORIA_VESTIDO}
+
+localizo e clico em outra categoria
+    [Documentação]    Localiza no menu lateral e clica na categoria
+    Wait Until Element Is Visible    ${BOTAO_CATEGORIA_MULHER}
+    Click Element    ${BOTAO_CATEGORIA_MULHER}
+
+sua subcategoria
+    [Documentação]    Clica no botão de subcategoria
+    Wait Until Element Is Visible    ${BOTAO_SUBCATEGORIA_TOP}
+    Click Element    ${BOTAO_SUBCATEGORIA_TOP}
+    
+
+devo ser redirecionado para a nova página de categoria selecionada 
+    [Documentação]    Verificar se foi redirecionado corretamente para a página da categoria
+    Wait Until Element Is Visible    ${ID_PAGINA_CATEGORIA_TOP}
+
+    #Verificar se o nome da página está correto
+    ${NOME_EM_TELA}    Get Text    ${ID_PAGINA_CATEGORIA_TOP}
+    Should Be Equal As Strings    ${NOME_EM_TELA}    ${NOME_PAGINA_CATEGORIA_TOP}
+
+    #Verificar se o título da aba está correto
+    ${TITULO_EM_TELA}    Get Title
+    Should Be Equal    ${TITULO_EM_TELA}    ${TITULO_PAGINA_CATEGORIA_TOP}
+
+ver seus respectivos produtos filtrados
+    [Documentação]    Ver se os produtos filtrados correspondem com a categoria 
+    Wait Until Element Is Visible    ${ID_PRIMEIRO_PRODUTO_CATEGORIA_TOP}
+
+    #Verificar se o primeiro produto corresponde a categoria correta
+    ${PRIMEIRO_PRODUTO_EM_TELA}    Get Text    ${ID_PRIMEIRO_PRODUTO_CATEGORIA_TOP}
+    Should Be Equal    ${PRIMEIRO_PRODUTO_EM_TELA}    ${NOME_PRIMEIRO_PRODUTO_CATEGORIA_TOP} 
+
+    #Segundo produto
+    Wait Until Element Is Visible    ${ID_SEGUNDO_PRODUTO_CATEGORIA_TOP}
+
+    #Verificar se o segundo produto corresponde a categoria correta
+    ${SEGUNDO_PRODUTO_EM_TELA}    Get Text    ${ID_SEGUNDO_PRODUTO_CATEGORIA_TOP}
+    Should Be Equal    ${SEGUNDO_PRODUTO_EM_TELA}    ${NOME_SEGUNDO_PRODUTO_CATEGORIA_TOP}
+
+    #Terceiro produto
+    Wait Until Element Is Visible    ${ID_TERCEIRO_PRODUTO_CATEGORIA_TOP}
+
+    #Verificar se o segundo produto corresponde a categoria correta
+    ${TERCEIRO_PRODUTO_EM_TELA}    Get Text    ${ID_TERCEIRO_PRODUTO_CATEGORIA_TOP}
+    Should Be Equal    ${TERCEIRO_PRODUTO_EM_TELA}    ${NOME_TERCEIRO_PRODUTO_CATEGORIA_TOP}
+    
